@@ -1,22 +1,12 @@
 package com.example.android.tourfc;
 
-public class AttractionDetails {
+class AttractionDetails {
+
+	//TODO: add member hashtags (String type data describing the activity type ex: hiking, outdoors)
 
 	private int mImageResourceId;
 	private String mTitle;
 	private String mDescription;
-
-	/**
-	 * Create data object that holds all the details of an attraction
-	 * This constructor would be invoked when the details do not include an image resource for the
-	 * said attraction
-	 *
-	 * @param mTitle       a String value for the name of the attraction
-	 * @param mDescription a String value for a brief description of the attraction
-	 */
-	public AttractionDetails(String mTitle, String mDescription) {
-		this(0, mTitle, mDescription);
-	}
 
 	/**
 	 * Create data object that holds all the details of an attraction including an image resource
@@ -26,7 +16,7 @@ public class AttractionDetails {
 	 * @param mTitle           a String value for the name of the attraction
 	 * @param mDescription     a String value for a brief description of the attraction
 	 */
-	public AttractionDetails(int mImageResourceId, String mTitle, String mDescription) {
+	AttractionDetails(int mImageResourceId, String mTitle, String mDescription) {
 		this.mImageResourceId = mImageResourceId;
 		this.mTitle = mTitle;
 		this.mDescription = mDescription;
@@ -37,7 +27,7 @@ public class AttractionDetails {
 	 *
 	 * @return the ID as an integer value
 	 */
-	public int getmImageResourceId() {
+	int getImageResourceId() {
 		return mImageResourceId;
 	}
 
@@ -46,7 +36,7 @@ public class AttractionDetails {
 	 *
 	 * @return the name of the attraction as a String
 	 */
-	public String getmTitle() {
+	String getTitle() {
 		return mTitle;
 	}
 
@@ -55,7 +45,7 @@ public class AttractionDetails {
 	 *
 	 * @return brief description of the attraction as a String
 	 */
-	public String getmDescription() {
+	String getDescription() {
 		return mDescription;
 	}
 }
