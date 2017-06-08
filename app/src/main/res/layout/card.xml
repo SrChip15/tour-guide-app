@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    app:cardUseCompatPadding="true">
+    card_view:cardElevation="5dp"
+    card_view:cardMaxElevation="5dp"
+    card_view:cardUseCompatPadding="true">
 
     <LinearLayout
         android:id="@+id/item_container_relative_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="?android:selectableItemBackground"
         android:orientation="vertical">
 
         <ImageView
@@ -24,6 +27,8 @@
             android:id="@+id/attraction_title_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:paddingLeft="8dp"
+            android:paddingStart="8dp"
             android:textColor="@android:color/black"
             android:textSize="18sp"
             android:typeface="sans"
@@ -34,6 +39,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingBottom="8dp"
+            android:paddingLeft="8dp"
+            android:paddingStart="8dp"
             android:textSize="12sp"
             tools:text="brief description"/>
 

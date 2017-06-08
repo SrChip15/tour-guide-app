@@ -4,8 +4,15 @@ class AttractionDetails {
 
 	//TODO: add member hashtags (String type data describing the activity type ex: hiking, outdoors)
 
+	/**
+	 * Image resource ID for the image file associated with the attraction
+	 */
 	private int mImageResourceId;
+
+	/** Title of the attraction */
 	private String mTitle;
+
+	/** Brief description of the attraction */
 	private String mDescription;
 
 	/**

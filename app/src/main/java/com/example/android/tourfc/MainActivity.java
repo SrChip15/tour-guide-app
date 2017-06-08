@@ -10,45 +10,52 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-	// view recycling object
-	private RecyclerView mRecyclerView;
-
-	// positions views
-	private RecyclerView.LayoutManager mLayoutManager;
-
-	// attaches data to views
-	private RecyclerView.Adapter mAdapter;
-
-	// data for the views
-	private ArrayList<AttractionDetails> mDataset;
+	// Attractions data stored as an AttractionDetail object in an {@link ArrayList}
+	private ArrayList<AttractionCollection> mActivityCollection;
 
 	@Override
 	protected void onCreate(@Nullable Bundle savedInstanceState) {
+		// Create the activity with the most recent data supplied in, if not, merely start activity
 		super.onCreate(savedInstanceState);
+
+		// Inflate the activity's UI
 		setContentView(R.layout.activity_main);
 
-		// Initialize dataset
-		mDataset = new ArrayList<>();
-		mDataset.add(new AttractionDetails(R.drawable.moon_over_horsetooth,
-				"Horsetooth Mountain Open Space", "Scenic Open Space"));
-		mDataset.add(new AttractionDetails(R.drawable.whitewater_rafting,
+
+		mActivityCollection = new ArrayList<>();
+
+		// Set section header
+		String activityHeader = getString(R.string.top_activities);
+
+		// Initialize list for list of attractions
+		ArrayList<AttractionDetails> activityAttractionsData = new ArrayList<>();
+
+		// Add activity attractions data
+		activityAttractionsData.add(new AttractionDetails(R.drawable.moon_over_horsetooth,
+				"Horsetooth Mountain Park", "Scenic Open Space"));
+		activityAttractionsData.add(new AttractionDetails(R.drawable.whitewater_rafting,
 				"Mountain Whitewater Descents", "White-water rafting"));
-		mDataset.add(new AttractionDetails(R.drawable.flower_train_garden,
+		activityAttractionsData.add(new AttractionDetails(R.drawable.flower_train_garden,
 				"Annual Flower Trial Garden", "Vibrant Horticulture display"));
 
+		// Consolidate data into collection data container
+		mActivityCollection.add(new AttractionCollection(activityHeader, activityAttractionsData));
 
-		// Hook onto recycler view
-		mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view);
+		// Hook the recycler view
+		RecyclerView recyclerView = (RecyclerView) findViewById(R.id.main_recycler_view);
 
-		// Not a near infinite list
-		mRecyclerView.setHasFixedSize(true);
+		// Set fixed size true and optimize recycler view performance
+		// The data container has fixed number of attractions and is not streaming from a web server
+		recyclerView.setHasFixedSize(true);
 
-		// use layout manager
-		mLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
-		mRecyclerView.setLayoutManager(mLayoutManager);
+		// Connect the {@link RecyclerView} widget to the vertical linear layout
+		// (not reverse layout - hence false)
+		recyclerView.setLayoutManager(new LinearLayoutManager(this,
+				LinearLayoutManager.VERTICAL, false));
 
-		// Attach adapter
-		mAdapter = new RecyclerAdapter(mDataset);
-		mRecyclerView.setAdapter(mAdapter);
+		// Attach adapter to the {@link RecyclerView} widget which is connected to a layout manager
+		AttractionCollectionDataAdapter collectionAdapter = new AttractionCollectionDataAdapter
+				(this, mActivityCollection);
+		recyclerView.setAdapter(collectionAdapter);
 	}
 }
