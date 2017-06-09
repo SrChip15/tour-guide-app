@@ -24,22 +24,91 @@ public class MainActivity extends AppCompatActivity {
 
 		mActivityCollection = new ArrayList<>();
 
-		// Set section header
-		String activityHeader = getString(R.string.top_activities);
+		/** Data feed for different categories */
+
+		// Set section header for top activities
+		String topActivityHeader = getString(R.string.top_activities);
 
 		// Initialize list for list of attractions
 		ArrayList<AttractionDetails> activityAttractionsData = new ArrayList<>();
 
-		// Add activity attractions data
+		// Add activities attractions data
 		activityAttractionsData.add(new AttractionDetails(R.drawable.moon_over_horsetooth,
-				"Horsetooth Mountain Park", "Scenic Open Space"));
+				"Horsetooth Mountain Park", getString(R.string.scenic_open_space)));
 		activityAttractionsData.add(new AttractionDetails(R.drawable.whitewater_rafting,
-				"Mountain Whitewater Descents", "White-water rafting"));
+				"Mountain Whitewater Descents", getString(R.string.white_water_rafting)));
 		activityAttractionsData.add(new AttractionDetails(R.drawable.flower_train_garden,
-				"Annual Flower Trial Garden", "Vibrant Horticulture display"));
+				"Annual Flower Trial Garden", getString(R.string.horticulture_display)));
+		activityAttractionsData.add(new AttractionDetails(R.drawable.horsetooth_reservoir,
+				"Horsetooth Reservoir", getString(R.string.best_outdoors)));
+		activityAttractionsData.add(new AttractionDetails(R.drawable.city_park,
+				"City Park", getString(R.string.ideal_relaxing_spot)));
+
+		// Set section header for top restaurants
+		String topRestaurantsHeader = getString(R.string.top_restaurants);
+
+		// Initialize list for restaurants
+		ArrayList<AttractionDetails> restaurantAttractionsData = new ArrayList<>();
+
+		// Add restaurants attractions data
+		restaurantAttractionsData.add(new AttractionDetails(R.drawable.the_melting_pot,
+				"The Melting Pot", getString(R.string.amazing_fondue)));
+		restaurantAttractionsData.add(new AttractionDetails(R.drawable.maza_kabob,
+				"Maza Kabob", getString(R.string.afghan_specialty)));
+		restaurantAttractionsData.add(new AttractionDetails(R.drawable.rio_grande,
+				"Rio Grande", getString(R.string.amazing_margarita)));
+		restaurantAttractionsData.add(new AttractionDetails(R.drawable.star_of_india,
+				"Star of India", getString(R.string.indian_buffet)));
+		restaurantAttractionsData.add(new AttractionDetails(R.drawable.lucile_creole,
+				"Lucile's", getString(R.string.breakfast_place)));
+		restaurantAttractionsData.add(new AttractionDetails(R.drawable.cafe_athens,
+				"Cafe Athens", getString(R.string.greek_mediterranean)));
+		restaurantAttractionsData.add(new AttractionDetails(R.drawable.cafe_de_bangkok,
+				"Cafe de Bangkok", getString(R.string.traditional_thai)));
+
+		// Set section header for top breweries
+		String topBreweriesHeader = getString(R.string.top_breweries);
+
+		// Initialize list for breweries
+		ArrayList<AttractionDetails> breweriesAttractionsData = new ArrayList<>();
+
+		// Add breweries attractions data
+		breweriesAttractionsData.add(new AttractionDetails(R.drawable.new_belgium,
+				"New Belgium Brewing Company", getString(R.string.new_belgium_free_tours)));
+		breweriesAttractionsData.add(new AttractionDetails(R.drawable.odell_brewing,
+				"Odell Brewing Company", getString(R.string.odell_microbrew)));
+		breweriesAttractionsData.add(new AttractionDetails(R.drawable.anheuser_busch,
+				"Anheuser Busch Brewery", getString(R.string.grand_tour)));
+		breweriesAttractionsData.add(new AttractionDetails(R.drawable.coopersmith_brewing,
+				"Coopersmith Pub and Brewing", getString(R.string.coopersmith_mixed_desc)));
+
+		// Set section header for top bars or nightlife
+		String topBarsNightlifeHeader = getString(R.string.top_bars_nightlife);
+
+		// Initialize list for bars or nightlife hangouts
+		ArrayList<AttractionDetails> barsNightlifeAttractionsData = new ArrayList<>();
+
+		// Add bars/nightlife attractions data
+		barsNightlifeAttractionsData.add(new AttractionDetails(R.drawable.social,
+				"Social", getString(R.string.creative_cocktails)));
+		barsNightlifeAttractionsData.add(new AttractionDetails(R.drawable.test_mayor_old_town,
+				"Mayor of Old Town", getString(R.string.mayor_great_selction)));
+		barsNightlifeAttractionsData.add(new AttractionDetails(R.drawable.colorado_room,
+				"The Colorado Room", getString(R.string.colorado_beers_and_spirits)));
+		barsNightlifeAttractionsData.add(new AttractionDetails(R.drawable.ace_gilletts,
+				"Ace Gilletts", getString(R.string.gilletts_crafted_beers)));
+		barsNightlifeAttractionsData.add(new AttractionDetails(R.drawable.elliot_martini_bar,
+				"Elliot's Martini bar", getString(R.string.elliot_martini_variety)));
 
 		// Consolidate data into collection data container
-		mActivityCollection.add(new AttractionCollection(activityHeader, activityAttractionsData));
+		mActivityCollection.add(new AttractionCollection(topActivityHeader,
+				activityAttractionsData));
+		mActivityCollection.add(new AttractionCollection(topRestaurantsHeader,
+				restaurantAttractionsData));
+		mActivityCollection.add(new AttractionCollection(topBreweriesHeader,
+				breweriesAttractionsData));
+		mActivityCollection.add(new AttractionCollection(topBarsNightlifeHeader,
+				barsNightlifeAttractionsData));
 
 		// Hook the recycler view
 		RecyclerView recyclerView = (RecyclerView) findViewById(R.id.main_recycler_view);

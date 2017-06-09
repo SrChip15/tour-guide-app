@@ -1,4 +1,28 @@
 <resources>
     <string name="app_name">Tour FC</string>
     <string name="top_activities">Top Activities</string>
+    <string name="scenic_open_space">Scenic Open Space</string>
+    <string name="white_water_rafting">White-water rafting</string>
+    <string name="horticulture_display">Vibrant Horticulture display</string>
+    <string name="top_restaurants">Top Restaurants</string>
+    <string name="amazing_fondue">Amazing Fondue place</string>
+    <string name="afghan_specialty">Afghan Specialties</string>
+    <string name="indian_buffet">Best Indian Buffet</string>
+    <string name="breakfast_place">Fantastic Breakfast Place</string>
+    <string name="greek_mediterranean">Good Old Greek-Mediterranean</string>
+    <string name="traditional_thai">Traditional Thai</string>
+    <string name="best_outdoors">All-in-one Outdoors</string>
+    <string name="ideal_relaxing_spot">Ideal Relaxing Spot</string>
+    <string name="top_breweries">Top Breweries</string>
+    <string name="new_belgium_free_tours">Great Free Tours</string>
+    <string name="odell_microbrew">Decent Draft Microbrews</string>
+    <string name="grand_tour">Magnificent Brewing House</string>
+    <string name="top_bars_nightlife">Top Bars/Nightlife</string>
+    <string name="amazing_margarita">Amazing Margaritas</string>
+    <string name="creative_cocktails">Creative Cocktails</string>
+    <string name="mayor_great_selction">Great Selction of Beers</string>
+    <string name="colorado_beers_and_spirits">Good Craft Beers and Local Spirits</string>
+    <string name="gilletts_crafted_beers">Superbly Crafted Cocktails</string>
+    <string name="coopersmith_mixed_desc">Interesting Choice of Beers and Great Location</string>
+    <string name="elliot_martini_variety">Large Selection of Martinis and Seasonal Cocktails</string>
 </resources>

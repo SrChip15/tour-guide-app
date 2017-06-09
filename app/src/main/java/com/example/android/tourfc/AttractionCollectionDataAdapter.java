@@ -102,7 +102,7 @@ class AttractionCollectionDataAdapter
 		/**
 		 * Create a {@link SectionViewHolder} that connects itself to all the relevant views
 		 * contained within the child view group
-		 *
+		 *moulyg
 		 * @param itemView a {@link ViewGroup} that is inflated when onCreateViewHolder is called
 		 */
 		SectionViewHolder(View itemView) {
