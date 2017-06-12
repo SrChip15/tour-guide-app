@@ -10,9 +10,6 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-	// Attractions data stored as an AttractionDetail object in an {@link ArrayList}
-	private ArrayList<AttractionCollection> mActivityCollection;
-
 	@Override
 	protected void onCreate(@Nullable Bundle savedInstanceState) {
 		// Create the activity with the most recent data supplied in, if not, merely start activity
@@ -21,8 +18,8 @@ public class MainActivity extends AppCompatActivity {
 		// Inflate the activity's UI
 		setContentView(R.layout.activity_main);
 
-
-		mActivityCollection = new ArrayList<>();
+		// Initialize list to store collection of attractions
+		ArrayList<AttractionCollection> activityCollection = new ArrayList<>();
 
 		/** Data feed for different categories */
 
@@ -101,13 +98,13 @@ public class MainActivity extends AppCompatActivity {
 				"Elliot's Martini bar", getString(R.string.elliot_martini_variety)));
 
 		// Consolidate data into collection data container
-		mActivityCollection.add(new AttractionCollection(topActivityHeader,
+		activityCollection.add(new AttractionCollection(topActivityHeader,
 				activityAttractionsData));
-		mActivityCollection.add(new AttractionCollection(topRestaurantsHeader,
+		activityCollection.add(new AttractionCollection(topRestaurantsHeader,
 				restaurantAttractionsData));
-		mActivityCollection.add(new AttractionCollection(topBreweriesHeader,
+		activityCollection.add(new AttractionCollection(topBreweriesHeader,
 				breweriesAttractionsData));
-		mActivityCollection.add(new AttractionCollection(topBarsNightlifeHeader,
+		activityCollection.add(new AttractionCollection(topBarsNightlifeHeader,
 				barsNightlifeAttractionsData));
 
 		// Hook the recycler view
@@ -124,7 +121,7 @@ public class MainActivity extends AppCompatActivity {
 
 		// Attach adapter to the {@link RecyclerView} widget which is connected to a layout manager
 		AttractionCollectionDataAdapter collectionAdapter = new AttractionCollectionDataAdapter
-				(this, mActivityCollection);
+				(this, activityCollection);
 		recyclerView.setAdapter(collectionAdapter);
 	}
 }

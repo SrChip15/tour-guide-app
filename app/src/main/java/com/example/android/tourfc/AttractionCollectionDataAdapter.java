@@ -61,7 +61,8 @@ class AttractionCollectionDataAdapter
 		// Get current attraction detail from current collection item
 		ArrayList<AttractionDetails> attractions = currentCollection.getCollection();
 
-		SingleAttractionDataAdapter singleAttractionAdapter = new SingleAttractionDataAdapter(attractions);
+		SingleAttractionDataAdapter singleAttractionAdapter = new SingleAttractionDataAdapter(
+				mContext, attractions);
 
 		// Set text for section title
 		holder.mSectionTitle.setText(SECTION_HEADER);

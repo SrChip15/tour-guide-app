@@ -1,5 +1,6 @@
 package com.example.android.tourfc;
 
+import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,9 +15,11 @@ class SingleAttractionDataAdapter
 		extends RecyclerView.Adapter<SingleAttractionDataAdapter.SingleAttractionViewHolder> {
 
 	private ArrayList<AttractionDetails> mAttractions;
+	private Context mContext;
 
-	SingleAttractionDataAdapter(ArrayList<AttractionDetails> attractions) {
+	SingleAttractionDataAdapter(Context context, ArrayList<AttractionDetails> attractions) {
 		this.mAttractions = attractions;
+		this.mContext = context;
 	}
 
 	@Override
@@ -31,7 +34,14 @@ class SingleAttractionDataAdapter
 		AttractionDetails attraction = mAttractions.get(position);
 
 		// Set the image file to be displayed for the attraction
-		holder.mImage.setImageResource(attraction.getImageResourceId());
+		// Load scaled down version of image file into memory
+		holder.mImage
+				.setImageBitmap(ScaledImages
+						.decodeSampledBitmapFromResource(
+								mContext.getResources(),
+								attraction.getImageResourceId(),
+								200,
+								100));
 
 		// Set the title of the attraction
 		holder.mAttractionTitle.setText(attraction.getTitle());
