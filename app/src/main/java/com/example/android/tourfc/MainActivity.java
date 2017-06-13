@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
 		restaurantAttractionsData.add(new AttractionDetails(R.drawable.cafe_athens,
 				getString(R.string.cafe_athens_title), getString(R.string.greek_mediterranean)));
 		restaurantAttractionsData.add(new AttractionDetails(R.drawable.cafe_de_bangkok,
-				getString(R.string.cafe_athens_title), getString(R.string.traditional_thai)));
+				getString(R.string.cafe_de_bangkok_title), getString(R.string.traditional_thai)));
 
 		// Set section header for top breweries
 		String topBreweriesHeader = getString(R.string.top_breweries);
