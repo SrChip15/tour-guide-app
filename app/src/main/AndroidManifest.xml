@@ -18,46 +18,152 @@
         </activity>
         <activity
             android:name=".HorsetoothMountainActivity"
-            android:label="@string/app_name"/>
-        <activity android:name=".MountainDescentsActivity">
+            android:label="@string/horsetooth_mountain_title">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.tourfc.MainActivity"/>
         </activity>
-        <activity android:name=".FlowerTrialGardenActivity">
+        <activity
+            android:name=".MountainDescentsActivity"
+            android:label="@string/mountain_whitewater_title">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.tourfc.MainActivity"/>
+
         </activity>
-        <activity android:name=".HorsetoothReservoirActivity">
+
+        <activity
+            android:name=".FlowerTrialGardenActivity"
+            android:label="@string/flower_trail_garden_title">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.tourfc.MainActivity"/>
         </activity>
-        <activity android:name=".CityParkActivity">
+        <activity
+            android:name=".HorsetoothReservoirActivity"
+            android:label="@string/horsetooth_reservoir_title">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.tourfc.MainActivity"/>
         </activity>
-        <activity android:name=".MeltingPotActivity">
+        <activity
+            android:name=".CityParkActivity"
+            android:label="@string/city_park_title">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.tourfc.MainActivity"/>
         </activity>
-        <activity android:name=".MazaKabobActivity">
+        <activity
+            android:name=".MeltingPotActivity"
+            android:label="@string/melting_pot_title">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.tourfc.MainActivity"/>
         </activity>
-        <activity android:name=".RioGrandeActivity">
+        <activity
+            android:name=".MazaKabobActivity"
+            android:label="@string/maza_kabob_title">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.tourfc.MainActivity"/>
         </activity>
-        <activity android:name=".StarOfIndiaActivity">
+        <activity
+            android:name=".RioGrandeActivity"
+            android:label="@string/rio_grande_title">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.tourfc.MainActivity"/>
         </activity>
-        <activity android:name=".LucileActivity">
+        <activity
+            android:name=".StarOfIndiaActivity"
+            android:label="@string/star_of_india_title">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.tourfc.MainActivity"/>
         </activity>
-        <activity android:name=".CafeAthensActivity">
+        <activity
+            android:name=".LucileActivity"
+            android:label="@string/lucile_title">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.tourfc.MainActivity"/>
         </activity>
-        <activity android:name=".CafeDeBangkokActivity">
+        <activity
+            android:name=".CafeAthensActivity"
+            android:label="@string/cafe_athens_title">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.tourfc.MainActivity"/>
         </activity>
-        <activity android:name=".NewBelgiumActivity">
+        <activity
+            android:name=".CafeDeBangkokActivity"
+            android:label="@string/cafe_athens_title">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.tourfc.MainActivity"/>
         </activity>
-        <activity android:name=".OdellActivity">
+        <activity
+            android:name=".NewBelgiumActivity"
+            android:label="@string/new_belgium_title">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.tourfc.MainActivity"/>
         </activity>
-        <activity android:name=".AnheuserBuschActivity">
+        <activity
+            android:name=".OdellActivity"
+            android:label="@string/odell_brewing_title">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.tourfc.MainActivity"/>
         </activity>
-        <activity android:name=".CooperSmithActivity">
+        <activity
+            android:name=".AnheuserBuschActivity"
+            android:label="@string/anheuser_busch_title">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.tourfc.MainActivity"/>
         </activity>
-        <activity android:name=".SocialActivity">
+        <activity
+            android:name=".CooperSmithActivity"
+            android:label="@string/coopersmith_title">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.tourfc.MainActivity"/>
         </activity>
-        <activity android:name=".MayorOfOldTownActivity">
+        <activity
+            android:name=".SocialActivity"
+            android:label="@string/social_title">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.tourfc.MainActivity"/>
         </activity>
-        <activity android:name=".ColoradoRoomActivity">
+        <activity
+            android:name=".MayorOfOldTownActivity"
+            android:label="@string/mayor_old_town_title">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.tourfc.MainActivity"/>
         </activity>
-        <activity android:name=".AceGillettsActivity">
+        <activity
+            android:name=".ColoradoRoomActivity"
+            android:label="@string/colorado_room_title">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.tourfc.MainActivity"/>
         </activity>
-        <activity android:name=".ElliotMartiniActivity">
+        <activity
+            android:name=".AceGillettsActivity"
+            android:label="@string/ace_gilletts_title">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.tourfc.MainActivity"/>
+        </activity>
+        <activity
+            android:name=".ElliotMartiniActivity"
+            android:label="@string/elliots_martini_title">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.tourfc.MainActivity"/>
         </activity>
     </application>
 

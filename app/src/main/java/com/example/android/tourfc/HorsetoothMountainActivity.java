@@ -1,16 +1,16 @@
 package com.example.android.tourfc;
 
-import android.app.Activity;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.util.TypedValue;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class HorsetoothMountainActivity extends Activity {
+public class HorsetoothMountainActivity extends AppCompatActivity {
 
 	@Override
 	protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -38,5 +38,6 @@ public class HorsetoothMountainActivity extends Activity {
 
 		// Grab a handle on the button view
 		Button buttonView = (Button) findViewById(R.id.attraction_detail_button_view);
+
 	}
 }

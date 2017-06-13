@@ -1,6 +1,27 @@
 <resources>
     <string name="app_name">Tour FC</string>
     <string name="show_all">show all ></string>
+    <string name="horsetooth_mountain_title">Horsetooth Mountain Park</string>
+    <string name="mountain_whitewater_title">Mountain Whitewater Descents</string>
+    <string name="flower_trail_garden_title">Annual Flower Trial Garden</string>
+    <string name="horsetooth_reservoir_title">Horsetooth Reservoir</string>
+    <string name="city_park_title">City Park</string>
+    <string name="melting_pot_title">The Melting Pot</string>
+    <string name="maza_kabob_title">Maza Kabob</string>
+    <string name="rio_grande_title">Rio Grande</string>
+    <string name="star_of_india_title">Star of India</string>
+    <string name="lucile_title">Lucile\'s</string>
+    <string name="cafe_athens_title">Cafe Athens</string>
+    <string name="cafe_de_bangkok_title">Cafe de Bangkok</string>
+    <string name="new_belgium_title">New Belgium Brewing Company</string>
+    <string name="odell_brewing_title">Odell Brewing Company</string>
+    <string name="anheuser_busch_title">Anheuser Busch Brewery</string>
+    <string name="coopersmith_title">Coopersmith Pub and Brewing</string>
+    <string name="social_title">Social</string>
+    <string name="mayor_old_town_title">Mayor of Old Town</string>
+    <string name="colorado_room_title">The Colorado Room</string>
+    <string name="ace_gilletts_title">Ace Gilletts</string>
+    <string name="elliots_martini_title">Elliot\'s Martini bar</string>
     <string name="top_activities">Top Activities</string>
     <string name="scenic_open_space">Scenic Open Space</string>
     <string name="white_water_rafting">White-water rafting</string>
