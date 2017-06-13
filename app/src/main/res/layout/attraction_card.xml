@@ -3,10 +3,11 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/attraction_card_view"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    card_view:cardElevation="5dp"
-    card_view:cardMaxElevation="5dp"
+    card_view:cardElevation="@dimen/attraction_card_horizontal_margin"
+    card_view:cardMaxElevation="@dimen/attraction_card_horizontal_margin"
     card_view:cardUseCompatPadding="true">
 
     <LinearLayout
@@ -16,32 +17,38 @@
         android:background="?android:selectableItemBackground"
         android:orientation="vertical">
 
+        <!-- This ImageView hold the scaled down version of the attraction's image file -->
         <ImageView
             android:id="@+id/attraction_image_view"
-            android:layout_width="300dp"
-            android:layout_height="150dp"
+            android:layout_width="@dimen/attraction_card_image_view_width"
+            android:layout_height="@dimen/attraction_card_image_view_height"
             android:scaleType="centerCrop"
-            android:src="@drawable/sample"/>
+            android:src="@drawable/sample"
+            android:contentDescription="@string/attraction_card_image_view_content_desc"/>
 
+        <!-- This is the TextView that displays the title of the attraction -->
         <TextView
             android:id="@+id/attraction_title_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingLeft="8dp"
-            android:paddingStart="8dp"
+            android:paddingLeft="@dimen/horizontal_margin"
+            android:paddingStart="@dimen/horizontal_margin"
+            android:paddingRight="@dimen/horizontal_margin"
             android:textColor="@android:color/black"
-            android:textSize="18sp"
+            android:textSize="@dimen/attraction_card_attraction_title_text_size"
             android:typeface="sans"
             tools:text="I am a peak"/>
 
+        <!-- This is the TextView that displays the brief description of the attraction -->
         <TextView
             android:id="@+id/attraction_brief_desc_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingBottom="8dp"
-            android:paddingLeft="8dp"
-            android:paddingStart="8dp"
-            android:textSize="12sp"
+            android:paddingBottom="@dimen/vertical_margin"
+            android:paddingLeft="@dimen/horizontal_margin"
+            android:paddingStart="@dimen/horizontal_margin"
+            android:paddingRight="@dimen/horizontal_margin"
+            android:textSize="@dimen/attraction_card_brief_desc_text_size"
             tools:text="brief description"/>
 
     </LinearLayout>

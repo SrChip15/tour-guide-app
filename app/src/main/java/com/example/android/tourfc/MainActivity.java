@@ -21,20 +21,19 @@ public class MainActivity extends AppCompatActivity {
 		// Initialize list to store collection of attractions
 		ArrayList<AttractionCollection> activityCollection = new ArrayList<>();
 
-		/** Data feed for different categories */
-
+		// Begin compiling of data set for the recycler view
 		// Set section header for top activities
 		String topActivityHeader = getString(R.string.top_activities);
 
 		// Initialize list for list of attractions
 		ArrayList<AttractionDetails> activityAttractionsData = new ArrayList<>();
 
-		// Add activities attractions data
+		// Add activities attractions data. Name of the establishment is intentionally hardcoded
 		activityAttractionsData.add(new AttractionDetails(R.drawable.moon_over_horsetooth,
 				"Horsetooth Mountain Park", getString(R.string.scenic_open_space)));
 		activityAttractionsData.add(new AttractionDetails(R.drawable.whitewater_rafting,
 				"Mountain Whitewater Descents", getString(R.string.white_water_rafting)));
-		activityAttractionsData.add(new AttractionDetails(R.drawable.flower_train_garden,
+		activityAttractionsData.add(new AttractionDetails(R.drawable.flower_trail_garden,
 				"Annual Flower Trial Garden", getString(R.string.horticulture_display)));
 		activityAttractionsData.add(new AttractionDetails(R.drawable.horsetooth_reservoir,
 				"Horsetooth Reservoir", getString(R.string.best_outdoors)));
@@ -47,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
 		// Initialize list for restaurants
 		ArrayList<AttractionDetails> restaurantAttractionsData = new ArrayList<>();
 
-		// Add restaurants attractions data
+		// Add restaurants attractions data. Name of the establishment is intentionally hardcoded
 		restaurantAttractionsData.add(new AttractionDetails(R.drawable.the_melting_pot,
 				"The Melting Pot", getString(R.string.amazing_fondue)));
 		restaurantAttractionsData.add(new AttractionDetails(R.drawable.maza_kabob,
@@ -69,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
 		// Initialize list for breweries
 		ArrayList<AttractionDetails> breweriesAttractionsData = new ArrayList<>();
 
-		// Add breweries attractions data
+		// Add breweries attractions data. Name of the establishment is intentionally hardcoded
 		breweriesAttractionsData.add(new AttractionDetails(R.drawable.new_belgium,
 				"New Belgium Brewing Company", getString(R.string.new_belgium_free_tours)));
 		breweriesAttractionsData.add(new AttractionDetails(R.drawable.odell_brewing,
@@ -85,10 +84,10 @@ public class MainActivity extends AppCompatActivity {
 		// Initialize list for bars or nightlife hangouts
 		ArrayList<AttractionDetails> barsNightlifeAttractionsData = new ArrayList<>();
 
-		// Add bars/nightlife attractions data
+		// Add bars/nightlife attractions data. Name of the establishment is intentionally hardcoded
 		barsNightlifeAttractionsData.add(new AttractionDetails(R.drawable.social,
 				"Social", getString(R.string.creative_cocktails)));
-		barsNightlifeAttractionsData.add(new AttractionDetails(R.drawable.test_mayor_old_town,
+		barsNightlifeAttractionsData.add(new AttractionDetails(R.drawable.mayor_old_town,
 				"Mayor of Old Town", getString(R.string.mayor_great_selction)));
 		barsNightlifeAttractionsData.add(new AttractionDetails(R.drawable.colorado_room,
 				"The Colorado Room", getString(R.string.colorado_beers_and_spirits)));
@@ -106,6 +105,7 @@ public class MainActivity extends AppCompatActivity {
 				breweriesAttractionsData));
 		activityCollection.add(new AttractionCollection(topBarsNightlifeHeader,
 				barsNightlifeAttractionsData));
+		// End of data set compilation
 
 		// Hook the recycler view
 		RecyclerView recyclerView = (RecyclerView) findViewById(R.id.main_recycler_view);

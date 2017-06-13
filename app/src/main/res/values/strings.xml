@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Tour FC</string>
+    <string name="show_all">show all ></string>
     <string name="top_activities">Top Activities</string>
     <string name="scenic_open_space">Scenic Open Space</string>
     <string name="white_water_rafting">White-water rafting</string>
@@ -20,9 +21,161 @@
     <string name="top_bars_nightlife">Top Bars/Nightlife</string>
     <string name="amazing_margarita">Amazing Margaritas</string>
     <string name="creative_cocktails">Creative Cocktails</string>
-    <string name="mayor_great_selction">Great Selction of Beers</string>
+    <string name="mayor_great_selction">Great Selection of Beers</string>
     <string name="colorado_beers_and_spirits">Good Craft Beers and Local Spirits</string>
     <string name="gilletts_crafted_beers">Superbly Crafted Cocktails</string>
     <string name="coopersmith_mixed_desc">Interesting Choice of Beers and Great Location</string>
     <string name="elliot_martini_variety">Large Selection of Martinis and Seasonal Cocktails</string>
+    <string name="sample_detailed_description">Detailed description of the attraction</string>
+    <string name="show_map">show in map</string>
+
+    <string name="city_park_detailed_desc">
+        City Park Pool is located in City Park.
+        Enjoy the park surroundings and Sheldon Lake for fishing and an outdoor pool.
+        City Park Pool is the best place to be during those hot summer days in Fort Collins.
+        City Park Pool provides you with a water park experience right in your own backyard.
+        Admission is charged for everyone entering City Park Pool.
+    </string>
+
+    <string name="horsetooth_reservoir_detailed_desc_card_text">
+        Six and one-half miles of water beckon visitors to come out and play! Surrounded by
+        1,900 acres of public lands, this reservoir has it all: fishing, boating, camping,
+        picnicking, swimming, scuba diving, rock climbing, and water skiing.
+    </string>
+
+    <string name="flower_trail_garden_detailed_desc_card_text">
+        The Annual Flower Trial Garden is a horticultural project at the Colorado State University
+        in Fort Collins. Every year, the project sees new varietals of different flowers planted in
+        the garden to assess their ability to develop and grow in the local climate, as well as
+        their flowering characteristics. Open to public and free of charge.
+    </string>
+
+    <string name="horsetooth_mountain_park_detailed_desc_card_text">
+        The scenic 2,711-acre Horsetooth Mountain Open Space (consisting of Culver, Soderberg,
+        and Hughey Open Spaces) covers elevations from 5,430 to 7,255 feet. Its 29 miles of hiking,
+        biking, and horseback riding trails connect to the Blue Sky Trail and Lory State Park trails.
+        The outstanding Horsetooth Rock is a familiar local landmark visible from the plains.
+    </string>
+
+    <string name="mountain_whitewater_descents_detailed_desc_card_text">
+        Mountain Whitewater Descents is a guide company offering whitewater rafting trips on
+        Cache La Poudre River, equipment rentals and a pub. It prides itself on its special permit
+        for using the river, which is the only "Wild and Scenic" river near Fort Collins and
+        Estes Park, offering the best wilderness rafting experience.
+    </string>
+
+    <string name="the_melting_pot_detailed_desc_card_text">
+        The only place in Fort Collins serving some amazing fondues, with the choice of heated pots
+        of cheese, chocolate or broth for dipping and cooking. For the adventurous, local favorites
+        also occupy a sizable portion of the menu. Waiters are friendly and helpful and they help
+        you decide the food befitting your palate. Make reservations ahead of time.
+    </string>
+
+    <string name="maza_kabob_detailed_desc_card_text">
+        Enjoy many delightful authentic Afghan recipes with savory flavors and mouth watering smells
+        brought straight from the heart of Afghanistan. Locally owned and operated. Serving
+        Fort Collins for more than 5 years!
+    </string>
+
+    <string name="rio_grande_detailed_desc_card_text">
+        The "Start of it All" - Fort Collins is the original Rio. Located in the heart of Old Town,
+        The Rio has become a popular destination for locals, students, and tourists to enjoy
+        fresh Tex Mex and legendary margaritas.
+    </string>
+
+    <string name="star_of_india_detailed_desc_card_text">
+        North Indian craft kitchen featuring local and international ingredients cooked fresh to
+        order keeping you in mind! Dine in/take out. The owners of this fine establishment believe
+        that spicy does not translate to "being hot". This is a go-to place for all indian food
+        cravers and others who like to occasionally get a refreshing taste of indian flavors.
+    </string>
+
+    <string name="lucile_creole_detailed_desc_card_text">
+        Amazing beignets, fantastic chicory coffee and other bayou-rific Cajun-Creole staples
+        mark this area chain, where the rich and flavorful breakfast fare and awesome brunch
+        are what fans expect when they go to heaven; the cozy, homey digs
+        capture New Orleans, but get there early on weekends or prepare to bump elbows.
+    </string>
+
+    <string name="cafe_athens_detailed_desc_card_text">
+        Delicious hot food, super fast service, awesome prices. Consistently on point every visit.
+        Chicken, falafel, and souvlaki gyros are incredibly good for the price. Local favorite is
+        the fries - double fried, nice and crispy, and perfectly salted. So good! Service is also
+        pleasantly friendly for a busy greek restaurant.
+    </string>
+
+    <string name="cafe_de_bangkok_detailed_desc_card_text">
+        Truly authentic Thai place in Ft Collins. If you are looking for fresh, authentic and
+        traditional Thai food, this place is as good as you will find. Unbelievable flavor and
+        spice that you won\'t find at most Thai or Asian cuisine restaurants. Chicken Cashew is a
+        must try. You either will feel something entirely new or it may transport you back home.
+    </string>
+
+    <string name="new_belgium_detailed_desc_card_text">
+        Free tour, getting to see behind the bottles of your favorite beer? Priceless. The tour
+        is fun!! Completely different brewery tour experience. Its a little more than a hour tour
+        with loads of new information about the process of beer brewing and get to learn all this in
+        a fun way.
+    </string>
+
+    <string name="odell_brewing_detailed_desc_card_text">
+        Odell breweries, is a gorgeous taproom just outside downtown Ft. Collins. There\'s ample
+        space to sip and socialize both inside and out, as well as a great little section of
+        souvenirs so tourists can bring back a memento of their visit. Bar service is friendly and
+        efficient, and the there\'s a food counter along with a stage for local entertainment.
+    </string>
+
+    <string name="anheuser_busch_detailed_desc_card_text">
+        The brewery tour is an immersive experience where you can hear, smell, touch and taste the
+        components that go into some of the world’s most popular beers. Additionally, Fort Collins
+        is the home to the world-famous Budweiser Clydesdales West Coast Team. You can get an
+        up-close and personal encounter and have your picture taken with these iconic horses!
+    </string>
+
+    <string name="coopersmith_detailed_desc_card_text">
+        Welcome to World-Famous CooperSmith\’s Pub and Brewing. Tucked into the heart of
+        Old Town Fort Collins, CooperSmith\’s offers a distinct alternative in eating and drinking
+        establishments. We invite you to enjoy our unique charm. Located across the walkway from
+        CooperSmith\’s Pubside, Poolside offers not only additional brewery space but an upscale
+        yet casual atmosphere.
+    </string>
+
+    <string name="social_detailed_desc_card_text">
+        Social is a locally-owned, underground, cocktail bar in Old Town Fort Collins. It\'s a
+        place to enjoy properly crafted cocktails, sommelier selected wines, and abundantly sliced
+        charcuterie. At the entrance into Old Town Square, a street clock and a well-lit stairwell
+        welcome you to an evening filled with great conversation. Friendly service and great
+        quality food and beverage.
+    </string>
+
+    <string name="mayor_of_old_town_detailed_desc_card_text">
+        Named one of the nation\'s top 100 beer bars, the Mayor of Old Town has 100 beers on tap
+        and a passionate staff that\'ll help you find your ideal brew. Good food menu at a
+        reasonable price, they really have a lot to choose from. This beer oasis is very close to
+        Colorado State University campus and is in downtown Fort Collins area.
+    </string>
+
+    <string name="the_colorado_room_detailed_desc_card_text">
+        Best place for Sliders and Poutine and Beer. It is right down the street from CSU, a
+        nice patio out front and lot of Colorado memorabilia inside creates a funky place to
+        hang out and get some good food and beer. Service is fantastic and friendly all around.
+    </string>
+
+    <string name="ace_gilletts_detailed_desc_card_text">
+        Step away from one world and descend underground
+        into another – a shadowy, smoldering enclave with walls nearly a century old that hold the
+        memories and merriment of travelers and the surrounding neighborhood alike. Sip a
+        handcrafted martini from our signature drink menu, or partake in that perfect pairing of
+        wine and unforgettable fare.
+    </string>
+
+    <string name="elliot_martini_bar_detailed_desc_card_text">
+        Cooking up inventive concoctions you could only dream of comes naturally to the talented
+        bartenders at this marvelous Fort Collins martini bar that\'s both chic (huge windows
+        and secluded booths) and chill (films projected on the wall); tabs are reasonable for what
+        you\'re getting and the atmosphere\'s perfect for either a group outing or a date, keeping
+        it a must-stop for many.
+    </string>
+    <string name="attraction_card_image_view_content_desc">ImageView displaying the attraction\'s image file</string>
+
 </resources>

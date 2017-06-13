@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimary">#1e4d2b</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="detailed_attraction_view_background">#B0BEC5</color>
+    <color name="top_activities_text_color">#00B0FF</color>
+    <color name="top_restaurants_text_color">#FF3D00</color>
+    <color name="top_breweries_text_color">#3D5AFE</color>
+    <color name="top_bars_nightlife_text_color">#FF9100</color>
+
 </resources>
