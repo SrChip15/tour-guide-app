@@ -2,8 +2,10 @@ package com.example.android.tourfc;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -68,6 +70,22 @@ class SingleAttractionDataAdapter
 
 		final AttractionDetails attraction = mAttractions.get(position);
 
+		// Convert px to dips
+		// Grab the context's resources
+		Resources r = mContext.getResources();
+
+		// Convert image's width dimension in pixels to dips to fit the card layout
+		int imageWidth = (int) TypedValue.applyDimension(
+				TypedValue.COMPLEX_UNIT_DIP,
+				300,
+				r.getDisplayMetrics());
+
+		// Convert image's height dimension in pixels to dips to fit the card layout
+		int imageHeight = (int) TypedValue.applyDimension(
+				TypedValue.COMPLEX_UNIT_DIP,
+				150,
+				r.getDisplayMetrics());
+
 		// Set the image file to be displayed for the attraction
 		// Load scaled down version of image file into memory
 		holder.attractionImage
@@ -75,8 +93,8 @@ class SingleAttractionDataAdapter
 						.decodeSampledBitmapFromResource(
 								mContext.getResources(),
 								attraction.getImageResourceId(),
-								200,
-								100));
+								imageWidth, // previous value 200
+								imageHeight)); // previous value 100
 
 		// Set the title of the attraction
 		holder.attractionTitle.setText(attraction.getTitle());
