@@ -93,135 +93,221 @@ class SingleAttractionDataAdapter
 				// activity as scrolled and clicked by the user
 				final Intent attractionDetailViewIntent;
 
-				switch (attraction.getTitle()) {
-					case "Horsetooth Mountain Park":
-						attractionDetailViewIntent = new Intent(
-								mContext,
-								HorsetoothMountainActivity.class);
-						mContext.startActivity(attractionDetailViewIntent);
-						break;
+				// Grab the context from the view
+				Context context = v.getContext();
 
-					case "Mountain Whitewater Descents":
-						attractionDetailViewIntent = new Intent(
-								mContext,
-								MountainDescentsActivity.class);
-						mContext.startActivity(attractionDetailViewIntent);
-						break;
 
-					case "Annual Flower Trial Garden":
-						attractionDetailViewIntent = new Intent(
-								mContext,
-								FlowerTrialGardenActivity.class);
-						mContext.startActivity(attractionDetailViewIntent);
-						break;
+				final String attractionName = attraction.getTitle();
 
-					case "Horsetooth Reservoir":
-						attractionDetailViewIntent = new Intent(
-								mContext,
-								HorsetoothReservoirActivity.class);
-						mContext.startActivity(attractionDetailViewIntent);
-						break;
+				// Check which attraction is clicked based on the title of the attraction
+				if (attractionName.equals(context.getString(R.string.horsetooth_mountain_title))) {
+					// Create Intent to navigate to the appropriate activity
+					attractionDetailViewIntent = new Intent(
+							mContext,
+							HorsetoothMountainActivity.class);
+					// Start the activity passed within the intent
+					mContext.startActivity(attractionDetailViewIntent);
 
-					case "City Park":
-						attractionDetailViewIntent = new Intent(mContext, CityParkActivity.class);
-						mContext.startActivity(attractionDetailViewIntent);
-						break;
+				} else if (attractionName
+						.equals(
+								context
+										.getString(R.string.mountain_whitewater_title))) {
+					// Create Intent to navigate to the appropriate activity
+					attractionDetailViewIntent = new Intent(
+							mContext,
+							MountainDescentsActivity.class);
+					// Start the activity passed within the intent
+					mContext.startActivity(attractionDetailViewIntent);
 
-					case "The Melting Pot":
-						attractionDetailViewIntent = new Intent(mContext, MeltingPotActivity.class);
-						mContext.startActivity(attractionDetailViewIntent);
-						break;
+				} else if (attractionName
+						.equals(
+								context
+										.getString(R.string.flower_trial_garden_title))) {
+					// Create Intent to navigate to the appropriate activity
+					attractionDetailViewIntent = new Intent(
+							mContext,
+							FlowerTrialGardenActivity.class);
+					// Start the activity passed within the intent
+					mContext.startActivity(attractionDetailViewIntent);
 
-					case "Maza Kabob":
-						attractionDetailViewIntent = new Intent(mContext, MazaKabobActivity.class);
-						mContext.startActivity(attractionDetailViewIntent);
-						break;
+				} else if (attractionName
+						.equals(
+								context
+										.getString(R.string.horsetooth_reservoir_title))) {
+					// Create Intent to navigate to the appropriate activity
+					attractionDetailViewIntent = new Intent(
+							mContext,
+							HorsetoothReservoirActivity.class);
+					// Start the activity passed within the intent
+					mContext.startActivity(attractionDetailViewIntent);
 
-					case "Rio Grande":
-						attractionDetailViewIntent = new Intent(mContext, RioGrandeActivity.class);
-						mContext.startActivity(attractionDetailViewIntent);
-						break;
+				} else if (attractionName
+						.equals(
+								context
+										.getString(R.string.city_park_title))) {
+					// Create Intent to navigate to the appropriate activity
+					attractionDetailViewIntent = new Intent(
+							mContext,
+							CityParkActivity.class);
+					// Start the activity passed within the intent
+					mContext.startActivity(attractionDetailViewIntent);
 
-					case "Star of India":
-						attractionDetailViewIntent = new Intent(
-								mContext,
-								StarOfIndiaActivity.class);
-						mContext.startActivity(attractionDetailViewIntent);
-						break;
+				} else if (attractionName
+						.equals(
+								context
+										.getString(R.string.melting_pot_title))) {
+					// Create Intent to navigate to the appropriate activity
+					attractionDetailViewIntent = new Intent(mContext, MeltingPotActivity.class);
+					// Start the activity passed within the intent
+					mContext.startActivity(attractionDetailViewIntent);
 
-					case "Lucile's":
-						attractionDetailViewIntent = new Intent(mContext, LucileActivity.class);
-						mContext.startActivity(attractionDetailViewIntent);
-						break;
+				} else if (attractionName
+						.equals(
+								context
+										.getString(R.string.maza_kabob_title))) {
+					// Create Intent to navigate to the appropriate activity
+					attractionDetailViewIntent = new Intent(mContext, MazaKabobActivity.class);
+					// Start the activity passed within the intent
+					mContext.startActivity(attractionDetailViewIntent);
 
-					case "Cafe Athens":
-						attractionDetailViewIntent = new Intent(mContext, CafeAthensActivity.class);
-						mContext.startActivity(attractionDetailViewIntent);
-						break;
+				} else if (attractionName
+						.equals(
+								context
+										.getString(R.string.rio_grande_title))) {
+					// Create Intent to navigate to the appropriate activity
+					attractionDetailViewIntent = new Intent(mContext, RioGrandeActivity.class);
+					// Start the activity passed within the intent
+					mContext.startActivity(attractionDetailViewIntent);
 
-					case "Cafe de Bangkok":
-						attractionDetailViewIntent = new Intent(
-								mContext,
-								CafeDeBangkokActivity.class);
-						mContext.startActivity(attractionDetailViewIntent);
-						break;
+				} else if (attractionName
+						.equals(
+								context
+										.getString(R.string.star_of_india_title))) {
+					// Create Intent to navigate to the appropriate activity
+					attractionDetailViewIntent = new Intent(
+							mContext,
+							StarOfIndiaActivity.class);
+					// Start the activity passed within the intent
+					mContext.startActivity(attractionDetailViewIntent);
 
-					case "New Belgium Brewing Company":
-						attractionDetailViewIntent = new Intent(mContext, NewBelgiumActivity.class);
-						mContext.startActivity(attractionDetailViewIntent);
-						break;
+				} else if (attractionName
+						.equals(
+								context
+										.getString(R.string.lucile_title))) {
+					// Create Intent to navigate to the appropriate activity
+					attractionDetailViewIntent = new Intent(mContext, LucileActivity.class);
+					// Start the activity passed within the intent
+					mContext.startActivity(attractionDetailViewIntent);
 
-					case "Odell Brewing Company":
-						attractionDetailViewIntent = new Intent(mContext, OdellActivity.class);
-						mContext.startActivity(attractionDetailViewIntent);
-						break;
+				} else if (attractionName
+						.equals(
+								context
+										.getString(R.string.cafe_athens_title))) {
+					// Create Intent to navigate to the appropriate activity
+					attractionDetailViewIntent = new Intent(mContext, CafeAthensActivity.class);
+					// Start the activity passed within the intent
+					mContext.startActivity(attractionDetailViewIntent);
 
-					case "Anheuser Busch Brewery":
-						attractionDetailViewIntent = new Intent(
-								mContext,
-								AnheuserBuschActivity.class);
-						mContext.startActivity(attractionDetailViewIntent);
-						break;
+				} else if (attractionName
+						.equals(
+								context
+										.getString(R.string.cafe_de_bangkok_title))) {
+					// Create Intent to navigate to the appropriate activity
+					attractionDetailViewIntent = new Intent(
+							mContext,
+							CafeDeBangkokActivity.class);
+					// Start the activity passed within the intent
+					mContext.startActivity(attractionDetailViewIntent);
 
-					case "Coopersmith Pub and Brewing":
-						attractionDetailViewIntent = new Intent(
-								mContext,
-								CooperSmithActivity.class);
-						mContext.startActivity(attractionDetailViewIntent);
-						break;
+				} else if (attractionName
+						.equals(
+								context
+										.getString(R.string.new_belgium_title))) {
+					// Create Intent to navigate to the appropriate activity
+					attractionDetailViewIntent = new Intent(mContext, NewBelgiumActivity.class);
+					// Start the activity passed within the intent
+					mContext.startActivity(attractionDetailViewIntent);
 
-					case "Social":
-						attractionDetailViewIntent = new Intent(mContext, SocialActivity.class);
-						mContext.startActivity(attractionDetailViewIntent);
-						break;
+				} else if (attractionName
+						.equals(
+								context
+										.getString(R.string.odell_brewing_title))) {
+					// Create Intent to navigate to the appropriate activity
+					attractionDetailViewIntent = new Intent(mContext, OdellActivity.class);
+					// Start the activity passed within the intent
+					mContext.startActivity(attractionDetailViewIntent);
 
-					case "Mayor of Old Town":
-						attractionDetailViewIntent = new Intent(
-								mContext,
-								MayorOfOldTownActivity.class);
-						mContext.startActivity(attractionDetailViewIntent);
-						break;
+				} else if (attractionName
+						.equals(
+								context
+										.getString(R.string.anheuser_busch_title))) {
+					// Create Intent to navigate to the appropriate activity
+					attractionDetailViewIntent = new Intent(
+							mContext,
+							AnheuserBuschActivity.class);
+					// Start the activity passed within the intent
+					mContext.startActivity(attractionDetailViewIntent);
 
-					case "The Colorado Room":
-						attractionDetailViewIntent = new Intent(
-								mContext,
-								ColoradoRoomActivity.class);
-						mContext.startActivity(attractionDetailViewIntent);
-						break;
+				} else if (attractionName
+						.equals(
+								context
+										.getString(R.string.coopersmith_title))) {
+					// Create Intent to navigate to the appropriate activity
+					attractionDetailViewIntent = new Intent(
+							mContext,
+							CooperSmithActivity.class);
+					// Start the activity passed within the intent
+					mContext.startActivity(attractionDetailViewIntent);
 
-					case "Ace Gilletts":
-						attractionDetailViewIntent = new Intent(
-								mContext,
-								AceGillettsActivity.class);
-						mContext.startActivity(attractionDetailViewIntent);
-						break;
+				} else if (attractionName
+						.equals(
+								context
+										.getString(R.string.social_title))) {
+					// Create Intent to navigate to the appropriate activity
+					attractionDetailViewIntent = new Intent(mContext, SocialActivity.class);
+					// Start the activity passed within the intent
+					mContext.startActivity(attractionDetailViewIntent);
 
-					case "Elliot's Martini bar":
-						attractionDetailViewIntent = new Intent(
-								mContext,
-								ElliotMartiniActivity.class);
-						mContext.startActivity(attractionDetailViewIntent);
-						break;
+				} else if (attractionName
+						.equals(
+								context
+										.getString(R.string.mayor_old_town_title))) {
+					// Create Intent to navigate to the appropriate activity
+					attractionDetailViewIntent = new Intent(
+							mContext,
+							MayorOfOldTownActivity.class);
+					// Start the activity passed within the intent
+					mContext.startActivity(attractionDetailViewIntent);
+
+				} else if (attractionName
+						.equals(
+								context
+										.getString(R.string.colorado_room_title))) {
+					// Create Intent to navigate to the appropriate activity
+					attractionDetailViewIntent = new Intent(
+							mContext,
+							ColoradoRoomActivity.class);
+					// Start the activity passed within the intent
+					mContext.startActivity(attractionDetailViewIntent);
+
+				} else if (attractionName
+						.equals(
+								context
+										.getString(R.string.ace_gilletts_title))) {
+					// Create Intent to navigate to the appropriate activity
+					attractionDetailViewIntent = new Intent(
+							mContext,
+							AceGillettsActivity.class);
+					// Start the activity passed within the intent
+					mContext.startActivity(attractionDetailViewIntent);
+
+				} else {
+					// Create Intent to navigate to the appropriate activity
+					attractionDetailViewIntent = new Intent(
+							mContext,
+							ElliotMartiniActivity.class);
+					// Start the activity passed within the intent
+					mContext.startActivity(attractionDetailViewIntent);
 				}
 			}
 		});

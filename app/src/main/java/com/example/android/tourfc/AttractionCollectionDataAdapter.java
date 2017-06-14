@@ -224,7 +224,6 @@ class AttractionCollectionDataAdapter
 							// Initiate moving to the activity
 							context.startActivity(passToActivity);
 							break;
-
 					}
 				}
 			});

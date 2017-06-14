@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
 		activityAttractionsData.add(new AttractionDetails(R.drawable.whitewater_rafting,
 				getString(R.string.mountain_whitewater_title), getString(R.string.white_water_rafting)));
 		activityAttractionsData.add(new AttractionDetails(R.drawable.flower_trail_garden,
-				getString(R.string.flower_trail_garden_title), getString(R.string.horticulture_display)));
+				getString(R.string.flower_trial_garden_title), getString(R.string.horticulture_display)));
 		activityAttractionsData.add(new AttractionDetails(R.drawable.horsetooth_reservoir,
 				getString(R.string.horsetooth_reservoir_title), getString(R.string.best_outdoors)));
 		activityAttractionsData.add(new AttractionDetails(R.drawable.city_park,

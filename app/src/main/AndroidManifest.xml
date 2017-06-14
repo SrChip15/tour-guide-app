@@ -32,7 +32,7 @@
         </activity>
         <activity
             android:name=".FlowerTrialGardenActivity"
-            android:label="@string/flower_trail_garden_title">
+            android:label="@string/flower_trial_garden_title">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.android.tourfc.MainActivity"/>

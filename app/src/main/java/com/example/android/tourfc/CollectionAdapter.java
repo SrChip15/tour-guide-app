@@ -102,7 +102,7 @@ class CollectionAdapter extends ArrayAdapter<AttractionDetails> {
 				} else if (attractionName.equals(context.getString(R.string.mountain_whitewater_title))) {
 					detailedActivityView = new Intent(context, MountainDescentsActivity.class);
 					context.startActivity(detailedActivityView);
-				} else if (attractionName.equals(context.getString(R.string.flower_trail_garden_title))) {
+				} else if (attractionName.equals(context.getString(R.string.flower_trial_garden_title))) {
 					detailedActivityView = new Intent(context, FlowerTrialGardenActivity.class);
 					context.startActivity(detailedActivityView);
 				} else if (attractionName.equals(context.getString(R.string.horsetooth_reservoir_title))) {

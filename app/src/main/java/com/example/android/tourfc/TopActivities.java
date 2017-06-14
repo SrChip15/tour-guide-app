@@ -27,7 +27,7 @@ public class TopActivities extends AppCompatActivity {
 				getString(R.string.white_water_rafting)));
 		mAttractions.add(new AttractionDetails(
 				R.drawable.flower_trail_garden,
-				getString(R.string.flower_trail_garden_title),
+				getString(R.string.flower_trial_garden_title),
 				getString(R.string.horticulture_display)));
 		mAttractions.add(new AttractionDetails(
 				R.drawable.horsetooth_reservoir,
