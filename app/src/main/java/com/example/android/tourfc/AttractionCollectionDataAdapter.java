@@ -1,6 +1,7 @@
 package com.example.android.tourfc;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -9,7 +10,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -54,7 +54,7 @@ class AttractionCollectionDataAdapter
 	@Override
 	public void onBindViewHolder(SectionViewHolder holder, final int position) {
 		// Get the data item that is being called to display
-		AttractionCollection currentCollection = mDataset.get(position);
+		final AttractionCollection currentCollection = mDataset.get(position);
 
 		// Get section header title from collection object
 		final String SECTION_HEADER = mDataset.get(position).getHeaderTitle();
@@ -67,6 +67,9 @@ class AttractionCollectionDataAdapter
 
 		// Set text for section title
 		holder.sectionTitle.setText(SECTION_HEADER);
+
+		// Set OnClickListener for the show all clickable
+
 
 		// Set matching text color for the section title and the secondary text "show all"
 		switch (position) {
@@ -178,11 +181,51 @@ class AttractionCollectionDataAdapter
 			// Connect to the text view of the child view group
 			showAllClickable = (TextView) itemView.findViewById(R.id.show_all_text_view);
 
+			// Setup and register an {@link OnClickListener} to receive "show all" navigation
+			// requests by the user
 			showAllClickable.setOnClickListener(new View.OnClickListener() {
 				@Override
 				public void onClick(View v) {
-					Toast.makeText(context, "Show All is under works, to be up soon!",
-							Toast.LENGTH_SHORT).show();
+					// Declare intent to navigate to the correct activity requested by the user
+					final Intent passToActivity;
+
+					// Grab the context from the view
+					Context context = v.getContext();
+
+					// Based on the "show all" clickable text of a collection type clicked by the
+					// user, navigate to the corresponding attraction collection
+					// E.g. the "show all" clickable text next to the "Top Activities" will take
+					// the user to a list of all the top activities
+					switch (getAdapterPosition()) {
+						case 0:
+							// First in the list is the TopActivities
+							passToActivity = new Intent(context, TopActivities.class);
+							// Initiate moving to the activity
+							context.startActivity(passToActivity);
+							break;
+
+						case 1:
+							// Second is the TopRestaurants to visit
+							passToActivity = new Intent(context, TopRestaurants.class);
+							// Initiate moving to the activity
+							context.startActivity(passToActivity);
+							break;
+
+						case 2:
+							// Third in the list is the TopBreweries of Fort Collins
+							passToActivity = new Intent(context, TopBreweries.class);
+							// Initiate moving to the activity
+							context.startActivity(passToActivity);
+							break;
+
+						case 3:
+							// Lastly, the best nightlife places to visit
+							passToActivity = new Intent(context, TopBarsNightlife.class);
+							// Initiate moving to the activity
+							context.startActivity(passToActivity);
+							break;
+
+					}
 				}
 			});
 		}

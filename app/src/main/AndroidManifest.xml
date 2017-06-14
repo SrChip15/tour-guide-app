@@ -29,9 +29,7 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.android.tourfc.MainActivity"/>
-
         </activity>
-
         <activity
             android:name=".FlowerTrialGardenActivity"
             android:label="@string/flower_trail_garden_title">
@@ -97,7 +95,7 @@
         </activity>
         <activity
             android:name=".CafeDeBangkokActivity"
-            android:label="@string/cafe_athens_title">
+            android:label="@string/cafe_de_bangkok_title">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.android.tourfc.MainActivity"/>
@@ -161,6 +159,30 @@
         <activity
             android:name=".ElliotMartiniActivity"
             android:label="@string/elliots_martini_title">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.tourfc.MainActivity"/>
+        </activity>
+        <activity android:name=".TopActivities"
+            android:label="@string/top_activities">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.tourfc.MainActivity"/>
+        </activity>
+        <activity android:name=".TopRestaurants"
+                  android:label="@string/top_restaurants">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.tourfc.MainActivity"/>
+        </activity>
+        <activity android:name=".TopBreweries"
+                  android:label="@string/top_breweries">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.tourfc.MainActivity"/>
+        </activity>
+        <activity android:name=".TopBarsNightlife"
+                  android:label="@string/top_bars_nightlife">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.android.tourfc.MainActivity"/>

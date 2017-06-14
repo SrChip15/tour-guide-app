@@ -18,7 +18,9 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
+            android:padding="@dimen/vertical_margin"
             android:layout_centerVertical="true"
+            android:onClick="showAllClick"
             android:text="@string/show_all"
             android:textAllCaps="true"
             android:textSize="@dimen/section_title_text"/>
