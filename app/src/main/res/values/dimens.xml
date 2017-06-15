@@ -3,7 +3,7 @@
     <dimen name="vertical_margin">8dp</dimen>
     <dimen name="horizontal_margin">8dp</dimen>
     <dimen name="detailed_text">16sp</dimen>
-    <dimen name="section_title_text">18sp</dimen>
+    <dimen name="section_title_text">16sp</dimen>
     <dimen name="attraction_card_horizontal_margin">5dp</dimen>
     <dimen name="attraction_card_image_view_width">300dp</dimen>
     <dimen name="attraction_card_image_view_height">150dp</dimen>

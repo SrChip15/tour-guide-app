@@ -98,66 +98,108 @@ class CollectionAdapter extends ArrayAdapter<AttractionDetails> {
 				// item that is being requested by the user
 				if (attractionName.equals(context.getString(R.string.horsetooth_mountain_title))) {
 					detailedActivityView = new Intent(context, HorsetoothMountainActivity.class);
+					// Pass in the class name to identify the immediate parent of the activity
+					detailedActivityView.putExtra("from_where","CollectionAdapter");
 					context.startActivity(detailedActivityView);
 				} else if (attractionName.equals(context.getString(R.string.mountain_whitewater_title))) {
 					detailedActivityView = new Intent(context, MountainDescentsActivity.class);
+					// Pass in the class name to identify the immediate parent of the activity
+					detailedActivityView.putExtra("from_where","CollectionAdapter");
 					context.startActivity(detailedActivityView);
 				} else if (attractionName.equals(context.getString(R.string.flower_trial_garden_title))) {
 					detailedActivityView = new Intent(context, FlowerTrialGardenActivity.class);
+					// Pass in the class name to identify the immediate parent of the activity
+					detailedActivityView.putExtra("from_where","CollectionAdapter");
 					context.startActivity(detailedActivityView);
 				} else if (attractionName.equals(context.getString(R.string.horsetooth_reservoir_title))) {
 					detailedActivityView = new Intent(context, HorsetoothReservoirActivity.class);
+					// Pass in the class name to identify the immediate parent of the activity
+					detailedActivityView.putExtra("from_where","CollectionAdapter");
 					context.startActivity(detailedActivityView);
 				} else if (attractionName.equals(context.getString(R.string.city_park_title))) {
 					detailedActivityView = new Intent(context, CityParkActivity.class);
+					// Pass in the class name to identify the immediate parent of the activity
+					detailedActivityView.putExtra("from_where","CollectionAdapter");
 					context.startActivity(detailedActivityView);
 				} else if (attractionName.equals(context.getString(R.string.melting_pot_title))) {
 					detailedActivityView = new Intent(context, MeltingPotActivity.class);
+					// Pass in the class name to identify the immediate parent of the activity
+					detailedActivityView.putExtra("from_where","CollectionAdapter");
 					context.startActivity(detailedActivityView);
 				} else if (attractionName.equals(context.getString(R.string.maza_kabob_title))) {
 					detailedActivityView = new Intent(context, MazaKabobActivity.class);
+					// Pass in the class name to identify the immediate parent of the activity
+					detailedActivityView.putExtra("from_where","CollectionAdapter");
 					context.startActivity(detailedActivityView);
 				} else if (attractionName.equals(context.getString(R.string.rio_grande_title))) {
 					detailedActivityView = new Intent(context, RioGrandeActivity.class);
+					// Pass in the class name to identify the immediate parent of the activity
+					detailedActivityView.putExtra("from_where","CollectionAdapter");
 					context.startActivity(detailedActivityView);
 				} else if (attractionName.equals(context.getString(R.string.star_of_india_title))) {
 					detailedActivityView = new Intent(context, StarOfIndiaActivity.class);
+					// Pass in the class name to identify the immediate parent of the activity
+					detailedActivityView.putExtra("from_where","CollectionAdapter");
 					context.startActivity(detailedActivityView);
 				} else if (attractionName.equals(context.getString(R.string.lucile_title))) {
 					detailedActivityView = new Intent(context, LucileActivity.class);
+					// Pass in the class name to identify the immediate parent of the activity
+					detailedActivityView.putExtra("from_where","CollectionAdapter");
 					context.startActivity(detailedActivityView);
 				} else if (attractionName.equals(context.getString(R.string.cafe_athens_title))) {
 					detailedActivityView = new Intent(context, CafeAthensActivity.class);
+					// Pass in the class name to identify the immediate parent of the activity
+					detailedActivityView.putExtra("from_where","CollectionAdapter");
 					context.startActivity(detailedActivityView);
 				} else if (attractionName.equals(context.getString(R.string.cafe_de_bangkok_title))) {
 					detailedActivityView = new Intent(context, CafeDeBangkokActivity.class);
+					// Pass in the class name to identify the immediate parent of the activity
+					detailedActivityView.putExtra("from_where","CollectionAdapter");
 					context.startActivity(detailedActivityView);
 				} else if (attractionName.equals(context.getString(R.string.new_belgium_title))) {
 					detailedActivityView = new Intent(context, NewBelgiumActivity.class);
+					// Pass in the class name to identify the immediate parent of the activity
+					detailedActivityView.putExtra("from_where","CollectionAdapter");
 					context.startActivity(detailedActivityView);
 				} else if (attractionName.equals(context.getString(R.string.odell_brewing_title))) {
 					detailedActivityView = new Intent(context, OdellActivity.class);
+					// Pass in the class name to identify the immediate parent of the activity
+					detailedActivityView.putExtra("from_where","CollectionAdapter");
 					context.startActivity(detailedActivityView);
 				} else if (attractionName.equals(context.getString(R.string.anheuser_busch_title))) {
 					detailedActivityView = new Intent(context, AnheuserBuschActivity.class);
+					// Pass in the class name to identify the immediate parent of the activity
+					detailedActivityView.putExtra("from_where","CollectionAdapter");
 					context.startActivity(detailedActivityView);
 				} else if (attractionName.equals(context.getString(R.string.coopersmith_title))) {
 					detailedActivityView = new Intent(context, CooperSmithActivity.class);
+					// Pass in the class name to identify the immediate parent of the activity
+					detailedActivityView.putExtra("from_where","CollectionAdapter");
 					context.startActivity(detailedActivityView);
 				} else if (attractionName.equals(context.getString(R.string.social_title))) {
 					detailedActivityView = new Intent(context, SocialActivity.class);
+					// Pass in the class name to identify the immediate parent of the activity
+					detailedActivityView.putExtra("from_where","CollectionAdapter");
 					context.startActivity(detailedActivityView);
 				} else if (attractionName.equals(context.getString(R.string.mayor_old_town_title))) {
 					detailedActivityView = new Intent(context, MayorOfOldTownActivity.class);
+					// Pass in the class name to identify the immediate parent of the activity
+					detailedActivityView.putExtra("from_where","CollectionAdapter");
 					context.startActivity(detailedActivityView);
 				} else if (attractionName.equals(context.getString(R.string.colorado_room_title))) {
 					detailedActivityView = new Intent(context, ColoradoRoomActivity.class);
+					// Pass in the class name to identify the immediate parent of the activity
+					detailedActivityView.putExtra("from_where","CollectionAdapter");
 					context.startActivity(detailedActivityView);
 				} else if (attractionName.equals(context.getString(R.string.ace_gilletts_title))) {
 					detailedActivityView = new Intent(context, AceGillettsActivity.class);
+					// Pass in the class name to identify the immediate parent of the activity
+					detailedActivityView.putExtra("from_where","CollectionAdapter");
 					context.startActivity(detailedActivityView);
 				} else {
 					detailedActivityView = new Intent(context, ElliotMartiniActivity.class);
+					// Pass in the class name to identify the immediate parent of the activity
+					detailedActivityView.putExtra("from_where","CollectionAdapter");
 					context.startActivity(detailedActivityView);
 				}
 			}
@@ -169,6 +211,7 @@ class CollectionAdapter extends ArrayAdapter<AttractionDetails> {
 
 	@Override
 	public int getCount() {
+		// Returns the number of objects in the {@link ArrayAdapter}
 		return mAttractions.size();
 	}
 }

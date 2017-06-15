@@ -4,14 +4,32 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.util.TypedValue;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 public class CityParkActivity extends AppCompatActivity {
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+
+		String immediateParent = getIntent().getStringExtra("from_where");
+
+		if (immediateParent == null) {
+
+			NavUtils.navigateUpFromSameTask(this);
+
+		} else {
+			Intent test = new Intent(this, TopActivities.class);
+			startActivity(test);
+		}
+		return true;
+	}
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+
+<!-- A RecyclerView with some commonly used attributes -->
+
+<android.support.v7.widget.RecyclerView
+
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_recycler_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.example.android.tourfc.MainActivity">
+    android:padding="@dimen/vertical_margin"
+    android:scrollbars="vertical">
 
-    <!-- A RecyclerView with some commonly used attributes -->
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/main_recycler_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="8dp"
-        android:scrollbars="vertical"/>
+</android.support.v7.widget.RecyclerView>
 
-</LinearLayout>

@@ -20,7 +20,6 @@
             android:layout_alignParentRight="true"
             android:padding="@dimen/vertical_margin"
             android:layout_centerVertical="true"
-            android:onClick="showAllClick"
             android:text="@string/show_all"
             android:textAllCaps="true"
             android:textSize="@dimen/section_title_text"/>
@@ -36,6 +35,8 @@
             android:layout_toLeftOf="@id/show_all_text_view"
             android:layout_toStartOf="@id/show_all_text_view"
             android:paddingLeft="@dimen/horizontal_margin"
+            android:paddingStart="@dimen/horizontal_margin"
+            android:paddingEnd="@dimen/horizontal_margin"
             android:textAllCaps="true"
             android:textSize="@dimen/section_title_text"
             tools:text="Sample title"/>
