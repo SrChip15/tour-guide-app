@@ -9,7 +9,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.util.TypedValue;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -38,22 +37,24 @@ public class HorsetoothMountainActivity extends AppCompatActivity {
 		// grab a handle on the text view
 		TextView textView = (TextView) findViewById(R.id.attraction_detail_text_view);
 		textView.setText(getString(R.string.horsetooth_mountain_park_detailed_desc_card_text));
-
-		// Grab a handle on the button view
-		Button buttonView = (Button) findViewById(R.id.attraction_detail_button_view);
-		buttonView.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				// Parse the uri with the longitude and latitude
-				// along with the label for the attraction
-				Uri location = Uri
-						.parse("geo:0,0?q=40.5227036,-105.1827149(Horsetooth+Mountain+Park)");
-
-				// Pass the parsed uri string to the method that creates map intent
-				showMap(location);
-			}
-		});
 	}
+
+	/**
+	 * This OnClick event handler method overlays the geographic coordinates over google maps
+	 * and displays the place with a balloon marker along with the name of the attraction
+	 *
+	 * @param view the {@link View} that has been clicked
+	 */
+	public void showOnMap(View view) {
+		// Parse the uri with the longitude and latitude
+		// along with the label for the attraction
+		Uri location = Uri
+				.parse("geo:0,0?q=40.5227036,-105.1827149(Horsetooth+Mountain+Park)");
+
+		// Pass the parsed uri string to the method that creates map intent
+		showMap(location);
+	}
+
 
 	/**
 	 * Create map intent that takes in the location of the attraction as a {@link Uri}
