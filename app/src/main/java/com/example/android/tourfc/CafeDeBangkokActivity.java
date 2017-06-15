@@ -15,17 +15,31 @@ import android.widget.TextView;
 
 public class CafeDeBangkokActivity extends AppCompatActivity {
 
+	/**
+	 * This method correctly identifies the immediate parent to this activity and handles the
+	 * up navigation effectively for attraction activity views that can have more than one parent
+	 *
+	 * @param item the menu item that is clicked
+	 * @return true when the click event is handled false otherwise
+	 */
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 
+		// Get extra information from the intent that caused the activity
 		String immediateParent = getIntent().getStringExtra("from_where");
 
+		// Check whether the activity was clicked from the landing page or main activity of the app
 		if (immediateParent == null) {
-
+			// Activity was clicked directly at the landing page
+			// Set navigation path to main parent or MainActivity
 			NavUtils.navigateUpFromSameTask(this);
 
 		} else {
+			// Activity was fired from the secondary view, i.e., the list view that lists all the
+			// attractions belonging to a particular genre
+			// Create an intent to go back to that same list view
 			Intent test = new Intent(this, TopRestaurants.class);
+			// Show list view when user clicks up
 			startActivity(test);
 		}
 		return true;
