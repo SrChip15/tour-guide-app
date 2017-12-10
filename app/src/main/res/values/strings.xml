@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Tour FC</string>
-    <string name="show_all">show all ></string>
+    <string name="show_all">Show All</string>
     <string name="horsetooth_mountain_title">Horsetooth Mountain Park</string>
     <string name="mountain_whitewater_title">Mountain Whitewater Descents</string>
     <string name="flower_trial_garden_title">Annual Flower Trial Garden</string>

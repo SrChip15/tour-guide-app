@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/section_linear_layout"
     android:layout_width="match_parent"
@@ -12,17 +13,28 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/show_all_text_view"
+        <ImageView
+            android:id="@+id/more_arrow_image_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:padding="@dimen/vertical_margin"
             android:layout_centerVertical="true"
-            android:text="@string/show_all"
+            app:srcCompat="@drawable/ic_navigate_next"
+            tools:ignore="ContentDescription"/>
+
+        <TextView
+            android:id="@+id/show_all_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/more_arrow_image_view"
+            android:layout_toStartOf="@id/more_arrow_image_view"
+            android:fontFamily="sans-serif-condensed"
             android:textAllCaps="true"
-            android:textSize="@dimen/section_title_text"/>
+            android:text="@string/show_all"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            tools:ignore="RelativeOverlap"/>
 
         <TextView
             android:id="@+id/section_title_text_view"
@@ -30,15 +42,11 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_centerVertical="true"
-            android:layout_gravity="center_vertical"
-            android:layout_toLeftOf="@id/show_all_text_view"
-            android:layout_toStartOf="@id/show_all_text_view"
+            android:fontFamily="sans-serif-smallcaps"
+            android:paddingEnd="@dimen/horizontal_margin"
             android:paddingLeft="@dimen/horizontal_margin"
             android:paddingStart="@dimen/horizontal_margin"
-            android:paddingEnd="@dimen/horizontal_margin"
-            android:textAllCaps="true"
-            android:textSize="@dimen/section_title_text"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
             tools:text="Sample title"/>
 
     </RelativeLayout>

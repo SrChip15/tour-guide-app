@@ -8,6 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -51,13 +52,14 @@ class AttractionCollectionDataAdapter
 	 *                 for the child view group
 	 * @param position the index position of the item in the adapter's data set
 	 */
+	@SuppressWarnings("ConstantConditions")
 	@Override
 	public void onBindViewHolder(SectionViewHolder holder, final int position) {
 		// Get the data item that is being called to display
 		final AttractionCollection currentCollection = mDataset.get(position);
 
 		// Get section header title from collection object
-		final String SECTION_HEADER = mDataset.get(position).getHeaderTitle();
+		final String sectionHeader = mDataset.get(position).getHeaderTitle();
 
 		// Get current attraction detail from current collection item
 		final ArrayList<AttractionDetails> attractions = currentCollection.getCollection();
@@ -66,59 +68,39 @@ class AttractionCollectionDataAdapter
 				mContext, attractions);
 
 		// Set text for section title
-		holder.sectionTitle.setText(SECTION_HEADER);
-
-		// Set OnClickListener for the show all clickable
-
+		holder.sectionTitle.setText(sectionHeader);
 
 		// Set matching text color for the section title and the secondary text "show all"
 		switch (position) {
 			case 0:
-				holder.sectionTitle.setTextColor(
-						ContextCompat
-								.getColor(
-										mContext,
-										R.color.top_activities_text_color));
-				holder.showAllClickable.setTextColor(
-						ContextCompat
-								.getColor(mContext,
-										R.color.top_activities_text_color));
+				int topActivitiesColor =
+						ContextCompat.getColor(mContext, R.color.top_activities_text_color);
+				holder.sectionTitle.setTextColor(topActivitiesColor);
+				holder.showAllClickable.setTextColor(topActivitiesColor);
 				break;
 
 			case 1:
-				holder.sectionTitle.setTextColor(
-						ContextCompat
-								.getColor(
-										mContext,
-										R.color.top_restaurants_text_color));
-				holder.showAllClickable.setTextColor(
-						ContextCompat
-								.getColor(mContext,
-										R.color.top_restaurants_text_color));
+				int topRestaurantsColor =
+						ContextCompat.getColor(mContext, R.color.top_restaurants_text_color);
+				holder.sectionTitle.setTextColor(topRestaurantsColor);
+				holder.showAllClickable.setTextColor(topRestaurantsColor);
 				break;
 
 			case 2:
-				holder.sectionTitle.setTextColor(
-						ContextCompat
-								.getColor(
-										mContext,
-										R.color.top_breweries_text_color));
-				holder.showAllClickable.setTextColor(
-						ContextCompat
-								.getColor(mContext,
-										R.color.top_breweries_text_color));
+				int topBreweriesColor =
+						ContextCompat.getColor(mContext, R.color.top_breweries_text_color);
+				holder.sectionTitle.setTextColor(topBreweriesColor);
+				holder.showAllClickable.setTextColor(topBreweriesColor);
 				break;
 
 			case 3:
-				holder.sectionTitle.setTextColor(
-						ContextCompat
-								.getColor(
-										mContext,
-										R.color.top_bars_nightlife_text_color));
-				holder.showAllClickable.setTextColor(
-						ContextCompat
-								.getColor(mContext,
-										R.color.top_bars_nightlife_text_color));
+				int topBarsColor =
+						ContextCompat.getColor(mContext, R.color.top_bars_nightlife_text_color);
+				holder.sectionTitle.setTextColor(topBarsColor);
+				holder.showAllClickable.setTextColor(topBarsColor);
+				break;
+			default:
+				break;
 		}
 
 		// Set fixed size true and optimize recycler view performance
@@ -147,21 +129,17 @@ class AttractionCollectionDataAdapter
 	 */
 	static class SectionViewHolder extends RecyclerView.ViewHolder {
 
-
 		TextView sectionTitle;
-
 		RecyclerView sectionCollectionRecyclerView;
-
 		TextView showAllClickable;
-
+		ImageView moreArrow;
 		LinearLayout linearLayout;
-
 		final Context context;
 
 		/**
 		 * Create a {@link SectionViewHolder} that connects itself to all the relevant views
 		 * contained within the child view group
-		 *moulyg
+		 *
 		 * @param itemView a {@link ViewGroup} that is inflated when onCreateViewHolder is called
 		 */
 		SectionViewHolder(View itemView) {
@@ -180,6 +158,9 @@ class AttractionCollectionDataAdapter
 
 			// Connect to the text view of the child view group
 			showAllClickable = (TextView) itemView.findViewById(R.id.show_all_text_view);
+
+			// Connect to the image view of the child view group
+			moreArrow = itemView.findViewById(R.id.more_arrow_image_view);
 
 			// Setup and register an {@link OnClickListener} to receive "show all" navigation
 			// requests by the user
