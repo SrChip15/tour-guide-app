@@ -18,6 +18,7 @@
         android:layout_marginTop="@dimen/vertical_margin"
         android:layout_weight="2"
         android:scaleType="centerCrop"
+        tools:ignore="ContentDescription"
         tools:src="@drawable/sample"/>
 
     <!-- CardView to display the description of the attraction -->
@@ -56,8 +57,8 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginLeft="8dp"
-        android:onClick="showOnMap"
         android:layout_marginRight="8dp"
+        android:onClick="showOnMap"
         android:text="@string/show_map"/>
 
 </LinearLayout>

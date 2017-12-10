@@ -110,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
 		// End of data set compilation
 
 		// Hook the recycler view
-		RecyclerView recyclerView = (RecyclerView) findViewById(R.id.main_recycler_view);
+		RecyclerView recyclerView = findViewById(R.id.main_recycler_view);
 
 		// Set fixed size true and optimize recycler view performance
 		// The data container has fixed number of attractions and not infinite list

@@ -53,7 +53,7 @@ public class CafeAthensActivity extends AppCompatActivity {
 		setContentView(R.layout.attraction_detail_view);
 
 		// Grab a handle on the card view for the detailed description of the attraction
-		CardView cardView = (CardView) findViewById(R.id.detailed_description_card_widget);
+		CardView cardView = findViewById(R.id.detailed_description_card_widget);
 		// Convert px to dips
 		Resources r = getResources();
 		int contentPadding = (int) TypedValue.applyDimension(
@@ -64,11 +64,11 @@ public class CafeAthensActivity extends AppCompatActivity {
 		cardView.setContentPadding(contentPadding, contentPadding, contentPadding, contentPadding);
 
 		// Grab a handle on the image view
-		ImageView detailImageView = (ImageView) findViewById(R.id.attraction_detail_image_view);
+		ImageView detailImageView = findViewById(R.id.attraction_detail_image_view);
 		detailImageView.setImageResource(R.drawable.cafe_athens);
 
 		// grab a handle on the text view
-		TextView textView = (TextView) findViewById(R.id.attraction_detail_text_view);
+		TextView textView = findViewById(R.id.attraction_detail_text_view);
 		textView.setText(getString(R.string.cafe_athens_detailed_desc_card_text));
 	}
 

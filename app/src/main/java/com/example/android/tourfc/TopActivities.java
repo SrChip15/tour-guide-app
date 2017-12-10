@@ -42,7 +42,7 @@ public class TopActivities extends AppCompatActivity {
 		CollectionAdapter listViewAdapter = new CollectionAdapter(TopActivities.this, mAttractions);
 
 		// Handle on {@link LisView}
-		ListView attractionListView = (ListView) findViewById(R.id.show_all_list_view);
+		ListView attractionListView = findViewById(R.id.show_all_list_view);
 
 		// Attach adapter to view
 		attractionListView.setAdapter(listViewAdapter);

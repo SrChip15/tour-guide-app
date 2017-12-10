@@ -147,65 +147,62 @@ class AttractionCollectionDataAdapter
 			context = itemView.getContext();
 
 			// Connect to the linear layout
-			linearLayout = (LinearLayout) itemView.findViewById(R.id.section_linear_layout);
+			linearLayout = itemView.findViewById(R.id.section_linear_layout);
 
 			// Connect to the image view of the child view group
-			sectionTitle = (TextView) itemView.findViewById(R.id.section_title_text_view);
+			sectionTitle = itemView.findViewById(R.id.section_title_text_view);
 
 			// Connect to the text view of the child view group
-			sectionCollectionRecyclerView = (RecyclerView) itemView
+			sectionCollectionRecyclerView = itemView
 					.findViewById(R.id.section_collection_recycler_view);
 
 			// Connect to the text view of the child view group
-			showAllClickable = (TextView) itemView.findViewById(R.id.show_all_text_view);
+			showAllClickable = itemView.findViewById(R.id.show_all_text_view);
 
 			// Connect to the image view of the child view group
 			moreArrow = itemView.findViewById(R.id.more_arrow_image_view);
 
 			// Setup and register an {@link OnClickListener} to receive "show all" navigation
 			// requests by the user
-			showAllClickable.setOnClickListener(new View.OnClickListener() {
-				@Override
-				public void onClick(View v) {
-					// Declare intent to navigate to the correct activity requested by the user
-					final Intent passToActivity;
+			showAllClickable.setOnClickListener(v -> {
+				// Declare intent to navigate to the correct activity requested by the user
+				final Intent passToActivity;
 
-					// Grab the context from the view
-					Context context = v.getContext();
+				// Grab the context from the view
+				Context context = v.getContext();
 
-					// Based on the "show all" clickable text of a collection type clicked by the
-					// user, navigate to the corresponding attraction collection
-					// E.g. the "show all" clickable text next to the "Top Activities" will take
-					// the user to a list of all the top activities
-					switch (getAdapterPosition()) {
-						case 0:
-							// First in the list is the TopActivities
-							passToActivity = new Intent(context, TopActivities.class);
-							// Initiate moving to the activity
-							context.startActivity(passToActivity);
-							break;
+				// Based on the "show all" clickable text of a collection type clicked by the
+				// user, navigate to the corresponding attraction collection
+				// E.g. the "show all" clickable text next to the "Top Activities" will take
+				// the user to a list of all the top activities
+				switch (getAdapterPosition()) {
+					case 0:
+						// First in the list is the TopActivities
+						passToActivity = new Intent(context, TopActivities.class);
+						// Initiate moving to the activity
+						context.startActivity(passToActivity);
+						break;
 
-						case 1:
-							// Second is the TopRestaurants to visit
-							passToActivity = new Intent(context, TopRestaurants.class);
-							// Initiate moving to the activity
-							context.startActivity(passToActivity);
-							break;
+					case 1:
+						// Second is the TopRestaurants to visit
+						passToActivity = new Intent(context, TopRestaurants.class);
+						// Initiate moving to the activity
+						context.startActivity(passToActivity);
+						break;
 
-						case 2:
-							// Third in the list is the TopBreweries of Fort Collins
-							passToActivity = new Intent(context, TopBreweries.class);
-							// Initiate moving to the activity
-							context.startActivity(passToActivity);
-							break;
+					case 2:
+						// Third in the list is the TopBreweries of Fort Collins
+						passToActivity = new Intent(context, TopBreweries.class);
+						// Initiate moving to the activity
+						context.startActivity(passToActivity);
+						break;
 
-						case 3:
-							// Lastly, the best nightlife places to visit
-							passToActivity = new Intent(context, TopBarsNightlife.class);
-							// Initiate moving to the activity
-							context.startActivity(passToActivity);
-							break;
-					}
+					case 3:
+						// Lastly, the best nightlife places to visit
+						passToActivity = new Intent(context, TopBarsNightlife.class);
+						// Initiate moving to the activity
+						context.startActivity(passToActivity);
+						break;
 				}
 			});
 		}
