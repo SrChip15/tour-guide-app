@@ -14,8 +14,6 @@ public class MainActivity extends AppCompatActivity {
 	protected void onCreate(@Nullable Bundle savedInstanceState) {
 		// Create the activity with the most recent data supplied in, if not, merely start activity
 		super.onCreate(savedInstanceState);
-
-		// Inflate the activity's UI
 		setContentView(R.layout.activity_main);
 
 		// Initialize list to store collection of attractions
