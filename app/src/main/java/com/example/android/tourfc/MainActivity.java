@@ -120,7 +120,7 @@ public class MainActivity extends AppCompatActivity {
 				LinearLayoutManager.VERTICAL, false));
 
 		// Attach adapter to the {@link RecyclerView} widget which is connected to a layout manager
-		AttractionCollectionDataAdapter collectionAdapter = new AttractionCollectionDataAdapter
+		AttractionCollectionAdapter collectionAdapter = new AttractionCollectionAdapter
 				(this, activityCollection);
 		recyclerView.setAdapter(collectionAdapter);
 	}

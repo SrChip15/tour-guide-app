@@ -33,4 +33,5 @@ ext {
     // App dependencies
     supportLibraryVersion = '27.1.0'
     junitVersion = '4.12'
+    constraintLayoutVersion = '1.0.2'
 }
