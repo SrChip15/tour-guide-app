@@ -33,7 +33,7 @@ public class MasterAdapter
      *
      * @param data an {@link ArrayList} of Attraction data object
      */
-    MasterAdapter(Context context, List<AttractionCollection> data) {
+    public MasterAdapter(Context context, List<AttractionCollection> data) {
         this.mData = data;
         this.mContext = context;
     }
@@ -155,41 +155,8 @@ public class MasterAdapter
             // Setup listener to receive "show all" navigation requests by the user
             showAllClickable.setOnClickListener(v -> {
                 // Declare intent to navigate to the correct activity requested by the user
-                Intent passToActivity;
-
-                // Based on the "show all" clickable text of a collection type clicked by the
-                // user, navigate to the corresponding attraction collection
-                // E.g. the "show all" clickable text next to the "Top Activities" will take
-                // the user to a list of all the top activities
-                switch (getAdapterPosition()) {
-                    case 0:
-                        // First in the list is the TopActivities
-                        passToActivity = new Intent(context, TopActivities.class);
-                        // Initiate moving to the activity
-                        context.startActivity(passToActivity);
-                        break;
-
-                    case 1:
-                        // Second is the TopRestaurants to visit
-                        passToActivity = new Intent(context, TopRestaurants.class);
-                        // Initiate moving to the activity
-                        context.startActivity(passToActivity);
-                        break;
-
-                    case 2:
-                        // Third in the list is the TopBreweries of Fort Collins
-                        passToActivity = new Intent(context, TopBreweries.class);
-                        // Initiate moving to the activity
-                        context.startActivity(passToActivity);
-                        break;
-
-                    case 3:
-                        // Lastly, the best nightlife places to visit
-                        passToActivity = new Intent(context, TopBarsNightlife.class);
-                        // Initiate moving to the activity
-                        context.startActivity(passToActivity);
-                        break;
-                }
+                Intent passToActivity = AttractionListActivity.newIntent(context, sectionTitle.getText().toString());
+                context.startActivity(passToActivity);
             });
         }
     }
