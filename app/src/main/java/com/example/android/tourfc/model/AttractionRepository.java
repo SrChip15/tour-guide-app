@@ -2,6 +2,7 @@ package com.example.android.tourfc.model;
 
 
 import android.content.Context;
+import android.util.SparseArray;
 
 import com.example.android.tourfc.R;
 
@@ -10,7 +11,7 @@ import java.util.ArrayList;
 public class AttractionRepository {
 
     private Context context;
-    private ArrayList<AttractionCollection> collections;
+    private SparseArray<AttractionCollection> collections;
     private static AttractionRepository attractionRepository;
 
     public static AttractionRepository getInstance(Context packageContext) {
@@ -22,16 +23,23 @@ public class AttractionRepository {
 
     private AttractionRepository(Context context) {
         this.context = context.getApplicationContext();
-        collections = new ArrayList<>();
+        collections = new SparseArray<>();
 
         // Build collection
-        collections.add(buildActivityCollection());
-        collections.add(buildRestaurantsCollection());
-        collections.add(buildBreweriesCollection());
-        collections.add(buildNightLifeCollection());
+        AttractionCollection activity = buildActivityCollection();
+        collections.put(activity.getHeaderTitle(), activity);
+
+        AttractionCollection restaurants = buildRestaurantsCollection();
+        collections.put(restaurants.getHeaderTitle(), restaurants);
+
+        AttractionCollection breweries = buildBreweriesCollection();
+        collections.put(breweries.getHeaderTitle(), breweries);
+
+        AttractionCollection nightLife = buildNightLifeCollection();
+        collections.put(nightLife.getHeaderTitle(), nightLife);
     }
 
-    public ArrayList<AttractionCollection> getCollections() {
+    public SparseArray<AttractionCollection> getCollections() {
         return collections;
     }
 
