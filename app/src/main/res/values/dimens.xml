@@ -11,4 +11,5 @@
     <dimen name="attraction_card_brief_desc_text_size">12sp</dimen>
     <dimen name="list_item_height">88dp</dimen>
     <dimen name="collection_title_horizontal_padding">4dp</dimen>
+    <dimen name="activity_collection_container_height">258dp</dimen>
 </resources>
