@@ -110,93 +110,12 @@ class SingleAttractionDataAdapter
         holder.attractionCardView.setOnClickListener(v -> {
             // Declare a final Intent variable to hook up the intent to the appropriate
             // activity as scrolled and clicked by the user
-            final Intent attractionDetailViewIntent;
-            final int attractionName = attraction.getTitle();
+            int name = attraction.getTitle();
+            int image = attraction.getImageResourceId();
+            int desc = attraction.getLongDesc();
 
-            // Check which attraction is clicked based on the title of the attraction
-            if (attractionName == R.string.horsetooth_mountain_title) {
-                attractionDetailViewIntent = new Intent(mContext, HorsetoothMountainActivity.class);
-                mContext.startActivity(attractionDetailViewIntent);
-
-            } else if (attractionName == R.string.mountain_whitewater_title) {
-                attractionDetailViewIntent = new Intent(mContext, MountainDescentsActivity.class);
-                mContext.startActivity(attractionDetailViewIntent);
-
-            } else if (attractionName == R.string.flower_trial_garden_title) {
-                attractionDetailViewIntent = new Intent(mContext, FlowerTrialGardenActivity.class);
-                mContext.startActivity(attractionDetailViewIntent);
-
-            } else if (attractionName == R.string.horsetooth_reservoir_title) {
-                attractionDetailViewIntent = new Intent(mContext, HorsetoothReservoirActivity.class);
-                mContext.startActivity(attractionDetailViewIntent);
-
-            } else if (attractionName == R.string.city_park_title) {
-                attractionDetailViewIntent = new Intent(mContext, CityParkActivity.class);
-                mContext.startActivity(attractionDetailViewIntent);
-
-            } else if (attractionName == R.string.melting_pot_title) {
-                attractionDetailViewIntent = new Intent(mContext, MeltingPotActivity.class);
-                mContext.startActivity(attractionDetailViewIntent);
-
-            } else if (attractionName == R.string.maza_kabob_title) {
-                attractionDetailViewIntent = new Intent(mContext, MazaKabobActivity.class);
-                mContext.startActivity(attractionDetailViewIntent);
-
-            } else if (attractionName == R.string.rio_grande_title) {
-                attractionDetailViewIntent = new Intent(mContext, RioGrandeActivity.class);
-                mContext.startActivity(attractionDetailViewIntent);
-
-            } else if (attractionName == R.string.star_of_india_title) {
-                attractionDetailViewIntent = new Intent(mContext, StarOfIndiaActivity.class);
-                mContext.startActivity(attractionDetailViewIntent);
-
-            } else if (attractionName == R.string.lucile_title) {
-                attractionDetailViewIntent = new Intent(mContext, LucileActivity.class);
-                mContext.startActivity(attractionDetailViewIntent);
-
-            } else if (attractionName == R.string.cafe_athens_title) {
-                attractionDetailViewIntent = new Intent(mContext, CafeAthensActivity.class);
-                mContext.startActivity(attractionDetailViewIntent);
-
-            } else if (attractionName == R.string.cafe_de_bangkok_title) {
-                attractionDetailViewIntent = new Intent(mContext, CafeDeBangkokActivity.class);
-                mContext.startActivity(attractionDetailViewIntent);
-
-            } else if (attractionName == R.string.new_belgium_title) {
-                attractionDetailViewIntent = new Intent(mContext, NewBelgiumActivity.class);
-                mContext.startActivity(attractionDetailViewIntent);
-
-            } else if (attractionName == R.string.odell_brewing_title) {
-                attractionDetailViewIntent = new Intent(mContext, OdellActivity.class);
-                mContext.startActivity(attractionDetailViewIntent);
-
-            } else if (attractionName == R.string.anheuser_busch_title) {
-                attractionDetailViewIntent = new Intent(mContext, AnheuserBuschActivity.class);
-                mContext.startActivity(attractionDetailViewIntent);
-            } else if (attractionName == R.string.coopersmith_title) {
-                attractionDetailViewIntent = new Intent(mContext, CooperSmithActivity.class);
-                mContext.startActivity(attractionDetailViewIntent);
-
-            } else if (attractionName == R.string.social_title) {
-                attractionDetailViewIntent = new Intent(mContext, SocialActivity.class);
-                mContext.startActivity(attractionDetailViewIntent);
-
-            } else if (attractionName == R.string.mayor_old_town_title) {
-                attractionDetailViewIntent = new Intent(mContext, MayorOfOldTownActivity.class);
-                mContext.startActivity(attractionDetailViewIntent);
-
-            } else if (attractionName == R.string.colorado_room_title) {
-                attractionDetailViewIntent = new Intent(mContext, ColoradoRoomActivity.class);
-                mContext.startActivity(attractionDetailViewIntent);
-
-            } else if (attractionName == R.string.ace_gilletts_title) {
-                attractionDetailViewIntent = new Intent(mContext, AceGillettsActivity.class);
-                mContext.startActivity(attractionDetailViewIntent);
-
-            } else if (attractionName == R.string.elliots_martini_title) {
-                attractionDetailViewIntent = new Intent(mContext, ElliotMartiniActivity.class);
-                mContext.startActivity(attractionDetailViewIntent);
-            }
+            Intent intent = AttractionActivity.newIntent(mContext, name, image, desc);
+            mContext.startActivity(intent);
         });
     }
 

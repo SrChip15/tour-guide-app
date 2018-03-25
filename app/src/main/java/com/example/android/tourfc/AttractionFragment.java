@@ -57,4 +57,30 @@ public class AttractionFragment extends Fragment {
 
         return view;
     }
+
+    /*
+    public void showOnMap(View view) {
+        // Parse the uri with the longitude and latitude
+        // along with the label for the attraction
+        Uri location = Uri
+                .parse("geo:0,0?q=40.5872139,-105.0766288(Social)");
+
+        // Pass the parsed uri string to the method that creates map intent
+        showMap(location);
+    }
+
+    public void showMap(Uri geoLocation) {
+        // Initialize the map intent with an action and the geolocation parameter
+        Intent mapIntent = new Intent(Intent.ACTION_VIEW, geoLocation);
+
+        // Make the intent explicit by setting Google Maps package
+        mapIntent.setPackage("com.google.android.apps.maps");
+
+        // Check for suitable package that can handle the intent
+        // Gracefully handles situations where the host system does not have the required package
+        // to handle the intent
+        if (mapIntent.resolveActivity(getPackageManager()) != null) {
+            startActivity(mapIntent);
+        }
+    }*/
 }
