@@ -19,7 +19,7 @@ import com.example.android.tourfc.model.Attraction;
 import java.util.ArrayList;
 import java.util.List;
 
-class CollectionAdapter extends ArrayAdapter<Attraction> {
+class AttractionListAdapter extends ArrayAdapter<Attraction> {
 
     /** Layout inflater to inflate custom layout */
     private LayoutInflater mLayoutInflater;
@@ -33,7 +33,7 @@ class CollectionAdapter extends ArrayAdapter<Attraction> {
      * @param context     holds the {@link Context} of the {@link android.widget.ListView}
      * @param attractions an {@link ArrayList} of {@link Attraction} objects
      */
-    public CollectionAdapter(@NonNull Context context, List<Attraction> attractions) {
+    public AttractionListAdapter(@NonNull Context context, List<Attraction> attractions) {
         super(context, 0, attractions);
         mAttractions = new ArrayList<>();
         mAttractions = attractions;
@@ -97,107 +97,107 @@ class CollectionAdapter extends ArrayAdapter<Attraction> {
             switch (attractionName) {
                 case R.string.horsetooth_mountain_title:
                     Intent horseToothIntent = new Intent(context, HorsetoothMountainActivity.class);
-                    horseToothIntent.putExtra("from_where", "CollectionAdapter");
+                    horseToothIntent.putExtra("from_where", "AttractionListAdapter");
                     context.startActivity(horseToothIntent);
                     break;
                 case R.string.mountain_whitewater_title:
                     Intent whiteWaterIntent = new Intent(context, MountainDescentsActivity.class);
-                    whiteWaterIntent.putExtra("from_where", "CollectionAdapter");
+                    whiteWaterIntent.putExtra("from_where", "AttractionListAdapter");
                     context.startActivity(whiteWaterIntent);
                     break;
                 case R.string.flower_trial_garden_title:
                     Intent flowerTrialIntent = new Intent(context, FlowerTrialGardenActivity.class);
-                    flowerTrialIntent.putExtra("from_where", "CollectionAdapter");
+                    flowerTrialIntent.putExtra("from_where", "AttractionListAdapter");
                     context.startActivity(flowerTrialIntent);
                     break;
                 case R.string.horsetooth_reservoir_title:
                     Intent reservoirIntent = new Intent(context, HorsetoothReservoirActivity.class);
-                    reservoirIntent.putExtra("from_where", "CollectionAdapter");
+                    reservoirIntent.putExtra("from_where", "AttractionListAdapter");
                     context.startActivity(reservoirIntent);
                     break;
                 case R.string.city_park_title:
                     Intent cityParkIntent = new Intent(context, CityParkActivity.class);
-                    cityParkIntent.putExtra("from_where", "CollectionAdapter");
+                    cityParkIntent.putExtra("from_where", "AttractionListAdapter");
                     context.startActivity(cityParkIntent);
                     break;
                 case R.string.melting_pot_title:
                     Intent meltingPotIntent = new Intent(context, MeltingPotActivity.class);
-                    meltingPotIntent.putExtra("from_where", "CollectionAdapter");
+                    meltingPotIntent.putExtra("from_where", "AttractionListAdapter");
                     context.startActivity(meltingPotIntent);
                     break;
                 case R.string.maza_kabob_title:
                     Intent mazaKabobIntent = new Intent(context, MazaKabobActivity.class);
-                    mazaKabobIntent.putExtra("from_where", "CollectionAdapter");
+                    mazaKabobIntent.putExtra("from_where", "AttractionListAdapter");
                     context.startActivity(mazaKabobIntent);
                     break;
                 case R.string.rio_grande_title:
                     Intent rioGrandeIntent = new Intent(context, RioGrandeActivity.class);
-                    rioGrandeIntent.putExtra("from_where", "CollectionAdapter");
+                    rioGrandeIntent.putExtra("from_where", "AttractionListAdapter");
                     context.startActivity(rioGrandeIntent);
                     break;
                 case R.string.star_of_india_title:
                     Intent starOfIndiaIntent = new Intent(context, StarOfIndiaActivity.class);
-                    starOfIndiaIntent.putExtra("from_where", "CollectionAdapter");
+                    starOfIndiaIntent.putExtra("from_where", "AttractionListAdapter");
                     context.startActivity(starOfIndiaIntent);
                     break;
                 case R.string.lucile_title:
                     Intent lucileIntent = new Intent(context, LucileActivity.class);
-                    lucileIntent.putExtra("from_where", "CollectionAdapter");
+                    lucileIntent.putExtra("from_where", "AttractionListAdapter");
                     context.startActivity(lucileIntent);
                     break;
                 case R.string.cafe_athens_title:
                     Intent cafeAthensIntent = new Intent(context, CafeAthensActivity.class);
-                    cafeAthensIntent.putExtra("from_where", "CollectionAdapter");
+                    cafeAthensIntent.putExtra("from_where", "AttractionListAdapter");
                     context.startActivity(cafeAthensIntent);
                     break;
                 case R.string.cafe_de_bangkok_title:
                     Intent bangkokCafeIntent = new Intent(context, CafeDeBangkokActivity.class);
-                    bangkokCafeIntent.putExtra("from_where", "CollectionAdapter");
+                    bangkokCafeIntent.putExtra("from_where", "AttractionListAdapter");
                     context.startActivity(bangkokCafeIntent);
                     break;
                 case R.string.new_belgium_title:
                     Intent newBelgiumIntent = new Intent(context, NewBelgiumActivity.class);
-                    newBelgiumIntent.putExtra("from_where", "CollectionAdapter");
+                    newBelgiumIntent.putExtra("from_where", "AttractionListAdapter");
                     context.startActivity(newBelgiumIntent);
                     break;
                 case R.string.odell_brewing_title:
                     Intent odellIntent = new Intent(context, OdellActivity.class);
-                    odellIntent.putExtra("from_where", "CollectionAdapter");
+                    odellIntent.putExtra("from_where", "AttractionListAdapter");
                     context.startActivity(odellIntent);
                     break;
                 case R.string.anheuser_busch_title:
                     Intent buschIntent = new Intent(context, AnheuserBuschActivity.class);
-                    buschIntent.putExtra("from_where", "CollectionAdapter");
+                    buschIntent.putExtra("from_where", "AttractionListAdapter");
                     context.startActivity(buschIntent);
                     break;
                 case R.string.coopersmith_title:
                     Intent cooperSmithIntent = new Intent(context, CooperSmithActivity.class);
-                    cooperSmithIntent.putExtra("from_where", "CollectionAdapter");
+                    cooperSmithIntent.putExtra("from_where", "AttractionListAdapter");
                     context.startActivity(cooperSmithIntent);
                     break;
                 case R.string.social_title:
                     Intent socialIntent = new Intent(context, SocialActivity.class);
-                    socialIntent.putExtra("from_where", "CollectionAdapter");
+                    socialIntent.putExtra("from_where", "AttractionListAdapter");
                     context.startActivity(socialIntent);
                     break;
                 case R.string.mayor_old_town_title:
                     Intent mayorIntent = new Intent(context, MayorOfOldTownActivity.class);
-                    mayorIntent.putExtra("from_where", "CollectionAdapter");
+                    mayorIntent.putExtra("from_where", "AttractionListAdapter");
                     context.startActivity(mayorIntent);
                     break;
                 case R.string.colorado_room_title:
                     Intent coloradoRoomIntent = new Intent(context, ColoradoRoomActivity.class);
-                    coloradoRoomIntent.putExtra("from_where", "CollectionAdapter");
+                    coloradoRoomIntent.putExtra("from_where", "AttractionListAdapter");
                     context.startActivity(coloradoRoomIntent);
                     break;
                 case R.string.ace_gilletts_title:
                     Intent aceIntent = new Intent(context, AceGillettsActivity.class);
-                    aceIntent.putExtra("from_where", "CollectionAdapter");
+                    aceIntent.putExtra("from_where", "AttractionListAdapter");
                     context.startActivity(aceIntent);
                     break;
                 case R.string.elliots_martini_title:
                     Intent elliotIntent = new Intent(context, ElliotMartiniActivity.class);
-                    elliotIntent.putExtra("from_where", "CollectionAdapter");
+                    elliotIntent.putExtra("from_where", "AttractionListAdapter");
                     context.startActivity(elliotIntent);
                     break;
                 default:

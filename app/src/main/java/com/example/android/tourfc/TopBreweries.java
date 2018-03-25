@@ -19,7 +19,7 @@ public class TopBreweries extends AppCompatActivity {
                 .get(R.string.top_breweries);
 
         // Initialize custom adapter to hold data
-        CollectionAdapter listViewAdapter = new CollectionAdapter(this, collection.getAttractions());
+        AttractionListAdapter listViewAdapter = new AttractionListAdapter(this, collection.getAttractions());
 
         // Handle on {@link LisView}
         ListView attractionListView = findViewById(R.id.show_all_list_view);

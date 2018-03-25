@@ -21,13 +21,13 @@ public class AttractionListActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list);
+        setContentView(R.layout.activity_fragment);
         String attractionType = getIntent().getStringExtra(EXTRA_ATTRACTION_TYPE);
 
         FragmentManager fm = getSupportFragmentManager();
         Fragment fragment = AttractionListFragment.newInstance(attractionType);
         fm.beginTransaction()
-                .add(R.id.list_fragment_container, fragment)
+                .add(R.id.fragment_container, fragment)
                 .commit();
     }
 }

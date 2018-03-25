@@ -23,7 +23,7 @@ public class AttractionListFragment extends Fragment {
     private static final String ARG_ATTRACTION_TYPE = "attractionType";
     private String attractionType;
     private ListView attractionListView;
-    private CollectionAdapter listViewAdapter;
+    private AttractionListAdapter listViewAdapter;
 
     public static AttractionListFragment newInstance(String attractionType) {
         Bundle args = new Bundle();
@@ -62,7 +62,7 @@ public class AttractionListFragment extends Fragment {
         }
 
         attractionListView = v.findViewById(R.id.show_all_list_view);
-        listViewAdapter = new CollectionAdapter(getActivity(), attractions);
+        listViewAdapter = new AttractionListAdapter(getActivity(), attractions);
         attractionListView.setAdapter(listViewAdapter);
 
         return v;

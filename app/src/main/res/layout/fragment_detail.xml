@@ -10,7 +10,7 @@
 
     <!-- Full resolution image of the attraction in an ImageView -->
     <ImageView
-        android:id="@+id/attraction_detail_image_view"
+        android:id="@+id/detail_image_view"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginLeft="@dimen/horizontal_margin"
@@ -37,7 +37,7 @@
 
             <!-- Detailed description of the attraction in a TextView -->
             <TextView
-                android:id="@+id/attraction_detail_text_view"
+                android:id="@+id/detail_text_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="fill"

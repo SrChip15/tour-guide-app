@@ -49,7 +49,7 @@ public class HorsetoothMountainActivity extends AppCompatActivity {
 	@Override
 	protected void onCreate(@Nullable Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.attraction_detail_view);
+		setContentView(R.layout.fragment_detail);
 
 		// Grab a handle on the card view for the detailed description of the attraction
 		CardView cardView = findViewById(R.id.detailed_description_card_widget);
@@ -63,11 +63,11 @@ public class HorsetoothMountainActivity extends AppCompatActivity {
 		cardView.setContentPadding(contentPadding, contentPadding, contentPadding, contentPadding);
 
 		// Grab a handle on the image view
-		ImageView detailImageView = findViewById(R.id.attraction_detail_image_view);
+		ImageView detailImageView = findViewById(R.id.detail_image_view);
 		detailImageView.setImageResource(R.drawable.moon_over_horsetooth);
 
 		// grab a handle on the text view
-		TextView textView = findViewById(R.id.attraction_detail_text_view);
+		TextView textView = findViewById(R.id.detail_text_view);
 		textView.setText(getString(R.string.horsetooth_mountain_park_detailed_desc_card_text));
 
 

@@ -50,7 +50,7 @@ public class CityParkActivity extends AppCompatActivity {
 		super.onCreate(savedInstanceState);
 
 		// Set layout for the activity
-		setContentView(R.layout.attraction_detail_view);
+		setContentView(R.layout.fragment_detail);
 
 		// Grab a handle on the card view for the detailed description of the attraction
 		CardView cardView = findViewById(R.id.detailed_description_card_widget);
@@ -64,11 +64,11 @@ public class CityParkActivity extends AppCompatActivity {
 		cardView.setContentPadding(contentPadding, contentPadding, contentPadding, contentPadding);
 
 		// Grab a handle on the image view
-		ImageView detailImageView = findViewById(R.id.attraction_detail_image_view);
+		ImageView detailImageView = findViewById(R.id.detail_image_view);
 		detailImageView.setImageResource(R.drawable.city_park);
 
 		// Grab a handle on the text view
-		TextView textView = findViewById(R.id.attraction_detail_text_view);
+		TextView textView = findViewById(R.id.detail_text_view);
 		textView.setText(getString(R.string.city_park_detailed_desc));
 	}
 
