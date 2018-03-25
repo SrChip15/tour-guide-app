@@ -12,6 +12,7 @@
         <activity
             android:name=".AttractionListActivity"
             android:parentActivityName=".MainActivity" />
+        <activity android:name=".AttractionActivity"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
