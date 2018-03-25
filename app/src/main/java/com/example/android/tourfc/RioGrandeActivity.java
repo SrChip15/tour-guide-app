@@ -69,7 +69,7 @@ public class RioGrandeActivity extends AppCompatActivity {
 
 		// grab a handle on the text view
 		TextView textView = findViewById(R.id.detail_text_view);
-		textView.setText(getString(R.string.rio_grande_detailed_desc_card_text));
+		textView.setText(getString(R.string.rio_grande_detailed_desc));
 	}
 
 	/**

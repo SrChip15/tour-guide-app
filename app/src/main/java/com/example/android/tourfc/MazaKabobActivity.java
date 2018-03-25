@@ -69,7 +69,7 @@ public class MazaKabobActivity extends AppCompatActivity {
 
 		// grab a handle on the text view
 		TextView textView = findViewById(R.id.detail_text_view);
-		textView.setText(getString(R.string.maza_kabob_detailed_desc_card_text));
+		textView.setText(getString(R.string.maza_kabob_detailed_desc));
 	}
 
 	/**

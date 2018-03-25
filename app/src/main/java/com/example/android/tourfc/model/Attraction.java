@@ -9,7 +9,10 @@ public class Attraction {
     private int titleTextResId;
 
     /** Brief description of the attraction */
-    private int descriptionTextResId;
+    private int shortDescTextResId;
+
+    /** Long description of the attraction */
+    private int longDescTextResId;
 
     /**
      * Create data object that holds all the details of an attraction including an image resource
@@ -17,12 +20,13 @@ public class Attraction {
      *
      * @param imageResourceId an integer value for the image resource ID
      * @param titleTextResId           a String value for the name of the attraction
-     * @param descriptionTextResId     a String value for a brief description of the attraction
+     * @param shortDescTextResId     a String value for a brief description of the attraction
      */
-    public Attraction(int imageResourceId, int titleTextResId, int descriptionTextResId) {
+    public Attraction(int imageResourceId, int titleTextResId, int shortDescTextResId, int longDescTextResId) {
         this.imageResourceId = imageResourceId;
         this.titleTextResId = titleTextResId;
-        this.descriptionTextResId = descriptionTextResId;
+        this.shortDescTextResId = shortDescTextResId;
+        this.longDescTextResId = longDescTextResId;
     }
 
     public int getImageResourceId() {
@@ -33,7 +37,11 @@ public class Attraction {
         return titleTextResId;
     }
 
-    public int getDescription() {
-        return descriptionTextResId;
+    public int getShortDesc() {
+        return shortDescTextResId;
+    }
+
+    public int getLongDesc() {
+        return longDescTextResId;
     }
 }

@@ -64,11 +64,11 @@ public class HorsetoothMountainActivity extends AppCompatActivity {
 
 		// Grab a handle on the image view
 		ImageView detailImageView = findViewById(R.id.detail_image_view);
-		detailImageView.setImageResource(R.drawable.moon_over_horsetooth);
+		detailImageView.setImageResource(R.drawable.horsetooth_mountain_park);
 
 		// grab a handle on the text view
 		TextView textView = findViewById(R.id.detail_text_view);
-		textView.setText(getString(R.string.horsetooth_mountain_park_detailed_desc_card_text));
+		textView.setText(getString(R.string.horsetooth_mountain_park_detailed_desc));
 
 
 

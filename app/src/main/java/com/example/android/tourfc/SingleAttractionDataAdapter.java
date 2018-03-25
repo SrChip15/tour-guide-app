@@ -103,7 +103,7 @@ class SingleAttractionDataAdapter
         holder.attractionTitle.setText(attraction.getTitle());
 
         // Set the description of the attraction
-        holder.attractionBriefDescription.setText(attraction.getDescription());
+        holder.attractionBriefDescription.setText(attraction.getShortDesc());
 
         // Setup and register {@link OnClickListener} to the {@link CardView} that is displaying
         // the {@link Attraction} item
