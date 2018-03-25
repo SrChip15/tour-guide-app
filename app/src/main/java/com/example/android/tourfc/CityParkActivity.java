@@ -1,19 +1,30 @@
 package com.example.android.tourfc;
 
 import android.content.Intent;
-import android.content.res.Resources;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.CardView;
-import android.util.TypedValue;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 public class CityParkActivity extends AppCompatActivity {
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.fragment_detail);
+
+		// Grab a handle on the image view
+		ImageView detailImageView = findViewById(R.id.detail_image_view);
+		detailImageView.setImageResource(R.drawable.city_park);
+
+		// Grab a handle on the text view
+		TextView textView = findViewById(R.id.detail_long_desc_tv);
+		textView.setText(getString(R.string.city_park_detailed_desc));
+	}
 
 	/**
 	 * This method correctly identifies the immediate parent to this activity and handles the
@@ -43,33 +54,6 @@ public class CityParkActivity extends AppCompatActivity {
 			startActivity(test);
 		}
 		return true;
-	}
-
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-
-		// Set layout for the activity
-		setContentView(R.layout.fragment_detail);
-
-		// Grab a handle on the card view for the detailed description of the attraction
-		CardView cardView = findViewById(R.id.detailed_description_card_widget);
-		// Convert px to dips
-		Resources r = getResources();
-		int contentPadding = (int) TypedValue.applyDimension(
-				TypedValue.COMPLEX_UNIT_DIP,
-				8,
-				r.getDisplayMetrics());
-		// Set padding for detailed description within the card widget
-		cardView.setContentPadding(contentPadding, contentPadding, contentPadding, contentPadding);
-
-		// Grab a handle on the image view
-		ImageView detailImageView = findViewById(R.id.detail_image_view);
-		detailImageView.setImageResource(R.drawable.city_park);
-
-		// Grab a handle on the text view
-		TextView textView = findViewById(R.id.detail_text_view);
-		textView.setText(getString(R.string.city_park_detailed_desc));
 	}
 
 	/**

@@ -25,9 +25,13 @@ public class AttractionListActivity extends AppCompatActivity {
         String attractionType = getIntent().getStringExtra(EXTRA_ATTRACTION_TYPE);
 
         FragmentManager fm = getSupportFragmentManager();
-        Fragment fragment = AttractionListFragment.newInstance(attractionType);
-        fm.beginTransaction()
-                .add(R.id.fragment_container, fragment)
-                .commit();
+        Fragment fragment = fm.findFragmentById(R.id.fragment_container);
+
+        if (fragment == null) {
+            fragment = AttractionListFragment.newInstance(attractionType);
+            fm.beginTransaction()
+                    .add(R.id.fragment_container, fragment)
+                    .commit();
+        }
     }
 }

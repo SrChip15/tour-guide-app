@@ -200,5 +200,6 @@
     <string name="attraction_card_image_view_content_desc">ImageView displaying the attraction\'s image file</string>
     <string name="list_item_image_view_content_desc">Image of Attraction</string>
     <string name="list_item_right_arrow_image_content_desc">Right arrow image to move forward to the next activity</string>
+    <string name="detail_image_cd">Image of Attraction</string>
 
 </resources>

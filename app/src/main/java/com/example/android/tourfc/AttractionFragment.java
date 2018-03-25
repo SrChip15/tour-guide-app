@@ -1,12 +1,9 @@
 package com.example.android.tourfc;
 
-import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.CardView;
-import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -50,23 +47,12 @@ public class AttractionFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_detail, container, false);
         getActivity().setTitle(titleResId);
 
-        // Grab a handle on the card view for the detailed description of the attraction
-        CardView cardView = view.findViewById(R.id.detailed_description_card_widget);
-        // Convert px to dips
-        Resources r = getResources();
-        int contentPadding = (int) TypedValue.applyDimension(
-                TypedValue.COMPLEX_UNIT_DIP,
-                8,
-                r.getDisplayMetrics());
-        // Set padding for detailed description within the card widget
-        cardView.setContentPadding(contentPadding, contentPadding, contentPadding, contentPadding);
-
         // Grab a handle on the image view
         ImageView detailImageView = view.findViewById(R.id.detail_image_view);
         detailImageView.setImageResource(imageResId);
 
         // grab a handle on the text view
-        TextView textView = view.findViewById(R.id.detail_text_view);
+        TextView textView = view.findViewById(R.id.detail_long_desc_tv);
         textView.setText(descriptionTextResId);
 
         return view;
