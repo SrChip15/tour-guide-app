@@ -119,9 +119,7 @@ public class MasterAdapter
         holder.sectionRecyclerView.setAdapter(singleAttractionAdapter);
     }
 
-    /**
-     * Returns the number of attractions in the attractions list
-     */
+    /** Returns the number of attractions in the attractions list */
     @Override
     public int getItemCount() {
         return mData.size();
