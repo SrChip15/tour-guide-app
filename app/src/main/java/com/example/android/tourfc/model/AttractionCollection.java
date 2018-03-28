@@ -1,13 +1,13 @@
 package com.example.android.tourfc.model;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class AttractionCollection {
 
 	private int headerTitle;
-	private ArrayList<Attraction> listOfAttractions;
+	private List<Attraction> listOfAttractions;
 
-	public AttractionCollection(int headerTextResId, ArrayList<Attraction> listOfAttractions) {
+	public AttractionCollection(int headerTextResId, List<Attraction> listOfAttractions) {
 		this.headerTitle = headerTextResId;
 		this.listOfAttractions = listOfAttractions;
 	}
@@ -16,7 +16,7 @@ public class AttractionCollection {
 		return headerTitle;
 	}
 
-	public ArrayList<Attraction> getAttractions() {
+	public List<Attraction> getAttractions() {
 		return listOfAttractions;
 	}
 }

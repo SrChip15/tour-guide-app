@@ -2,6 +2,7 @@ package com.example.android.tourfc.model;
 
 
 import android.content.Context;
+import android.support.annotation.VisibleForTesting;
 import android.util.SparseArray;
 
 import com.example.android.tourfc.R;
@@ -39,11 +40,13 @@ public class AttractionRepository {
         collections.put(nightLife.getHeaderTitle(), nightLife);
     }
 
+    // TODO - Change the below data container for testability
     public SparseArray<AttractionCollection> getCollections() {
         return collections;
     }
 
-    private AttractionCollection buildActivityCollection() {
+    @VisibleForTesting
+    static AttractionCollection buildActivityCollection() {
         ArrayList<Attraction> attractions = new ArrayList<>();
 
         attractions.add(new Attraction(
