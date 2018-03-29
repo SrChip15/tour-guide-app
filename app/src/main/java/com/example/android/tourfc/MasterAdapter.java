@@ -66,7 +66,7 @@ public class MasterAdapter
         final int sectionHeader = mData.get(position).getHeaderTitle();
 
         // Get current attraction detail from current collection item
-        final ArrayList<Attraction> attractions = currentCollection.getAttractions();
+        final List<Attraction> attractions = currentCollection.getAttractions();
 
         SingleAttractionDataAdapter singleAttractionAdapter = new SingleAttractionDataAdapter(
                 mContext, attractions);
@@ -153,7 +153,9 @@ public class MasterAdapter
             // Setup listener to receive "show all" navigation requests by the user
             showAllClickable.setOnClickListener(v -> {
                 // Declare intent to navigate to the correct activity requested by the user
-                Intent passToActivity = AttractionListActivity.newIntent(context, sectionTitle.getText().toString());
+                int sectionResId = Utils.resolveStringToResId(context, sectionTitle.getText());
+                if (sectionResId == 0) throw new IllegalArgumentException("Unexpected section header value received from ShowAll click listener");
+                Intent passToActivity = AttractionListActivity.newIntent(context, Utils.resolveStringToResId(context, sectionTitle.getText()));
                 context.startActivity(passToActivity);
             });
         }

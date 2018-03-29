@@ -5,12 +5,10 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.SparseArray;
 
 import com.example.android.tourfc.model.AttractionCollection;
 import com.example.android.tourfc.model.AttractionRepository;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -23,11 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
 		// Initialize list to store collection of attractions
 		AttractionRepository repository = AttractionRepository.getInstance(this);
-		SparseArray<AttractionCollection> collection = repository.getCollections();
-		List<AttractionCollection> data = new ArrayList<>();
-		for (int i = 0; i < collection.size(); i++) {
-			data.add(collection.valueAt(i));
-		}
+		List<AttractionCollection> collections = repository.getCollections();
 
 		// Hook the recycler view
 		RecyclerView recyclerView = findViewById(R.id.main_recycler_view);
@@ -41,8 +35,8 @@ public class MainActivity extends AppCompatActivity {
 		recyclerView.setLayoutManager(new LinearLayoutManager(this,
 				LinearLayoutManager.VERTICAL, false));
 
-		// Attach adapter to the {@link RecyclerView} widget which is connected to a layout manager
-		MasterAdapter collectionAdapter = new MasterAdapter(this, data);
+		// Attach adapter to the RecyclerView widget which is connected to a layout manager
+		MasterAdapter collectionAdapter = new MasterAdapter(this, collections);
 		recyclerView.setAdapter(collectionAdapter);
 	}
 }

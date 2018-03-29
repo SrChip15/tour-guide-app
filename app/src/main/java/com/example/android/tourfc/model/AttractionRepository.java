@@ -3,16 +3,16 @@ package com.example.android.tourfc.model;
 
 import android.content.Context;
 import android.support.annotation.VisibleForTesting;
-import android.util.SparseArray;
 
 import com.example.android.tourfc.R;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class AttractionRepository {
 
     private Context context;
-    private SparseArray<AttractionCollection> collections;
+    private List<AttractionCollection> collections;
     private static AttractionRepository attractionRepository;
 
     public static AttractionRepository getInstance(Context packageContext) {
@@ -22,32 +22,41 @@ public class AttractionRepository {
         return attractionRepository;
     }
 
+    public AttractionCollection getCollection(int sectionTitle) {
+        for (int i = 0; i < collections.size(); i++) {
+            if (sectionTitle == collections.get(i).getHeaderTitle()) {
+                return collections.get(i);
+            }
+        }
+
+        return null;
+    }
+
     private AttractionRepository(Context context) {
         this.context = context.getApplicationContext();
-        collections = new SparseArray<>();
+        collections = new ArrayList<>();
 
         // Build collection
         AttractionCollection activity = buildActivityCollection();
-        collections.put(activity.getHeaderTitle(), activity);
+        collections.add(activity);
 
         AttractionCollection restaurants = buildRestaurantsCollection();
-        collections.put(restaurants.getHeaderTitle(), restaurants);
+        collections.add(restaurants);
 
         AttractionCollection breweries = buildBreweriesCollection();
-        collections.put(breweries.getHeaderTitle(), breweries);
+        collections.add(breweries);
 
         AttractionCollection nightLife = buildNightLifeCollection();
-        collections.put(nightLife.getHeaderTitle(), nightLife);
+        collections.add(nightLife);
     }
 
-    // TODO - Change the below data container for testability
-    public SparseArray<AttractionCollection> getCollections() {
+    public List<AttractionCollection> getCollections() {
         return collections;
     }
 
     @VisibleForTesting
     static AttractionCollection buildActivityCollection() {
-        ArrayList<Attraction> attractions = new ArrayList<>();
+        List<Attraction> attractions = new ArrayList<>();
 
         attractions.add(new Attraction(
                         R.drawable.horsetooth_mountain_park,
@@ -88,7 +97,8 @@ public class AttractionRepository {
         return new AttractionCollection(R.string.top_activities, attractions);
     }
 
-    private AttractionCollection buildRestaurantsCollection() {
+    @VisibleForTesting
+    static AttractionCollection buildRestaurantsCollection() {
         ArrayList<Attraction> attractions = new ArrayList<>();
 
         attractions.add(new Attraction(
@@ -144,7 +154,8 @@ public class AttractionRepository {
         return new AttractionCollection(R.string.top_restaurants, attractions);
     }
 
-    private AttractionCollection buildBreweriesCollection() {
+    @VisibleForTesting
+    static AttractionCollection buildBreweriesCollection() {
         ArrayList<Attraction> attractions = new ArrayList<>();
 
         attractions.add(new Attraction(
@@ -179,7 +190,8 @@ public class AttractionRepository {
         return new AttractionCollection(R.string.top_breweries, attractions);
     }
 
-    private AttractionCollection buildNightLifeCollection() {
+    @VisibleForTesting
+    static AttractionCollection buildNightLifeCollection() {
         ArrayList<Attraction> attractions = new ArrayList<>();
 
         attractions.add(new Attraction(

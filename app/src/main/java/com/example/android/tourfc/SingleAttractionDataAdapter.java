@@ -39,7 +39,7 @@ class SingleAttractionDataAdapter
      * @param context     a {@link Context} to get a handle on the application's environment
      * @param attractions a {@link ArrayList} of {@link Attraction}
      */
-    SingleAttractionDataAdapter(Context context, ArrayList<Attraction> attractions) {
+    SingleAttractionDataAdapter(Context context, List<Attraction> attractions) {
         this.mAttractions = attractions;
         this.mContext = context;
     }
