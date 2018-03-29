@@ -34,5 +34,6 @@ ext {
     supportLibraryVersion = '27.1.0'
     junitVersion = '4.12'
     mockitoVersion = '2.10.0'
+    roboelectricVersion = '3.8'
     constraintLayoutVersion = '1.0.2'
 }
