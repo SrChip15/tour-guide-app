@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,15 +17,18 @@ import java.util.List;
 
 
 public class AttractionListFragment extends Fragment {
+    /* Class Constants */
+    private static final String ARG_SECTION_TITLE = "sectionTitle";
+    private static final String TAG = AttractionListFragment.class.getSimpleName();
 
-    private static final String ARG_ATTRACTION_TYPE = "attractionType";
-    private int attractionType;
+    /* Class variables */
+    private int sectionTitle;
     private ListView attractionListView;
     private AttractionListAdapter listViewAdapter;
 
-    public static AttractionListFragment newInstance(int attractionType) {
+    public static AttractionListFragment newInstance(int sectionTitle) {
         Bundle args = new Bundle();
-        args.putInt(ARG_ATTRACTION_TYPE, attractionType);
+        args.putInt(ARG_SECTION_TITLE, sectionTitle);
 
         AttractionListFragment fragment = new AttractionListFragment();
         fragment.setArguments(args);
@@ -35,7 +39,9 @@ public class AttractionListFragment extends Fragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setRetainInstance(true);
-        attractionType = getArguments().getInt(ARG_ATTRACTION_TYPE);
+
+        sectionTitle = getArguments().getInt(ARG_SECTION_TITLE);
+        Log.d(TAG, "onCreate: section title = " + sectionTitle);
     }
 
     @Nullable
@@ -45,10 +51,10 @@ public class AttractionListFragment extends Fragment {
         View v = inflater.inflate(R.layout.show_all_view, container, false);
 
         AttractionRepository repository = AttractionRepository.getInstance(getActivity());
-        List<Attraction> attractions = repository.getCollection(attractionType).getAttractions();
+        List<Attraction> attractions = repository.getCollection(sectionTitle).getAttractions();
 
         attractionListView = v.findViewById(R.id.show_all_list_view);
-        listViewAdapter = new AttractionListAdapter(getActivity(), attractions);
+        listViewAdapter = new AttractionListAdapter(getActivity(), attractions, sectionTitle);
         attractionListView.setAdapter(listViewAdapter);
 
         return v;

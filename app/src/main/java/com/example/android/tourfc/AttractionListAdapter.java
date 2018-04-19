@@ -27,17 +27,20 @@ class AttractionListAdapter extends ArrayAdapter<Attraction> {
     /** ArrayList for {@link Attraction} object */
     private List<Attraction> mAttractions;
 
+    private int sectionTitle;
+
     /**
      * Create new collection adapter
      *
      * @param context     holds the {@link Context} of the {@link android.widget.ListView}
      * @param attractions an {@link ArrayList} of {@link Attraction} objects
      */
-    public AttractionListAdapter(@NonNull Context context, List<Attraction> attractions) {
+    public AttractionListAdapter(@NonNull Context context, List<Attraction> attractions, int sectionTitle) {
         super(context, 0, attractions);
         mAttractions = new ArrayList<>();
         mAttractions = attractions;
         mLayoutInflater = LayoutInflater.from(context);
+        this.sectionTitle = sectionTitle;
     }
 
     @NonNull
@@ -81,23 +84,10 @@ class AttractionListAdapter extends ArrayAdapter<Attraction> {
         // Get a handle on the {@link RelativeLayout} that holds the attraction's data
         RelativeLayout listRow = convertView.findViewById(R.id.list_item_row);
 
-        // Setup and register an {@link OnClickListener} to navigate to the appropriate activity
+        // Setup and register OnClickListener to navigate to the appropriate activity
         listRow.setOnClickListener(v -> {
-            // Grab the context from the view
-            Context context = v.getContext();
-
-            // Get attraction details
-            int nameResId = currentAttraction.getTitle();
-            int imageResId = currentAttraction.getImageResourceId();
-            int descResId = currentAttraction.getLongDesc();
-
-            Intent intent = AttractionActivity.newIntent(
-                    context,
-                    nameResId,
-                    imageResId,
-                    descResId
-            );
-            context.startActivity(intent);
+            Intent intent = AttractionPagerActivity.newIntent(getContext(), sectionTitle, currentAttraction.getTitle());
+            getContext().startActivity(intent);
         });
 
         return convertView;

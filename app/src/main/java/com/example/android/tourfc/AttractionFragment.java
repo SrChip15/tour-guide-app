@@ -45,7 +45,6 @@ public class AttractionFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_detail, container, false);
-        getActivity().setTitle(titleResId);
 
         // Grab a handle on the image view
         ImageView detailImageView = view.findViewById(R.id.detail_image_view);
