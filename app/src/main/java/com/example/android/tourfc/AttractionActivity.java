@@ -20,7 +20,7 @@ public class AttractionActivity extends SingleActivity {
 
     @Override
     protected Fragment createFragment() {
-        Attraction attraction = (Attraction) getIntent().getSerializableExtra(EXTRA_ATTRACTION);
+        Attraction attraction = getIntent().getParcelableExtra(EXTRA_ATTRACTION);
         return AttractionFragment.newInstance(attraction);
     }
 }

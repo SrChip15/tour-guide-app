@@ -25,7 +25,7 @@ public class AttractionFragment extends Fragment {
 
     public static AttractionFragment newInstance(Attraction attraction) {
         Bundle args = new Bundle();
-        args.putSerializable(ARG_ATTRACTION, attraction);
+        args.putParcelable(ARG_ATTRACTION, attraction);
 
         AttractionFragment fragment = new AttractionFragment();
         fragment.setArguments(args);
@@ -36,7 +36,7 @@ public class AttractionFragment extends Fragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        attraction = (Attraction) getArguments().getSerializable(ARG_ATTRACTION);
+        attraction = getArguments() != null ? getArguments().getParcelable(ARG_ATTRACTION) : null;
     }
 
     @Nullable
