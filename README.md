@@ -1,24 +1,19 @@
 # Tour Guide App Project
-The application lists all the tourist attractions that is popular and fun to experience. All the attractions are divided into
-four categories, namely top activities, top restaurants, top breweries, and top bars/nightlife. 
+An Android application that presents all the popular attractions of the city of Fort Collins, categorized as Activities, Restaurants, Breweries, Bars/Nightlife. Splash screen presents all the categories vertically and the attractions horizontally, i.e., user could access all the information using swipe gestures from the splash screen itself. 
 
-The splash screen presents all the categories, which lists all the attractions as cards within each categories. This is 
-achieved by nesting recycler views. A list view with all the attractons from a given category is also available. The list view 
-is made available when the user clicks on the "Show All" button on the top right hand side of each category. Detailed 
-description and fun facts about the attraction is provided in the details screen (single-click on the attraction). Further, an 
-user can also use the app to find the location of an attraction on [Google Maps](https://www.google.com/maps), which can then be used for navigation purposes.
+User could click on “Show All” in the splash screen to see all the attractions from the category in a vertical list. User could also click on an attraction to view a brief description about the attraction. Further, an user can also view the location of the attraction on [Google Maps](https://www.google.com/maps), simply by clicking on the "Show in Map" button.
 
-This app has been built to the specifications of the tour guide app project rubric, which is part of the 
-Multi-screen Apps module of [Udacity's Android Basics Nanodegree program](https://www.udacity.com/course/android-basics-nanodegree-by-google--nd803).
-
-### Objective
-The goal is to create a tour guide app which presents relevant information to a user who’s visiting your city. The app 
-can list top attractions, restaurants, public places, or events for the city. It can contain all the best known secrets 
-that only locals know.
+### Specs
+* Developed a Nested RecyclerView with Section Headers to build splash screen UI
+* Used CardView to present attractions as Cards
+* Used ViewPager to facilitate swipe navigation to subsequent attraction while in details screen
+* Used ConstrainLayout to build the base UI for splash screen and details screen (landscape)
+* Written in Java 8 with Lambdas
 
 ### Tools
-* Gradle v4.1
-* Android Plugin v3.0.1
+* Gradle v4.4
+* Android Plugin v3.1.1
+* Support Library v27.1.1
 * Android API v27
 * Android Build Tools v27
 
