@@ -31,9 +31,9 @@ ext {
     compileSdkVersion = 27
 
     // App dependencies
-    supportLibraryVersion = '27.1.0'
+    supportLibraryVersion = '27.1.1'
     junitVersion = '4.12'
     mockitoVersion = '2.10.0'
     roboelectricVersion = '3.8'
-    constraintLayoutVersion = '1.0.2'
+    constraintLayoutVersion = '1.1.0'
 }
