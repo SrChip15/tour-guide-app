@@ -108,13 +108,7 @@ class SingleAttractionDataAdapter
         // Setup and register {@link OnClickListener} to the {@link CardView} that is displaying
         // the {@link Attraction} item
         holder.attractionCardView.setOnClickListener(v -> {
-            // Declare a final Intent variable to hook up the intent to the appropriate
-            // activity as scrolled and clicked by the user
-            int name = attraction.getTitle();
-            int image = attraction.getImageResourceId();
-            int desc = attraction.getLongDesc();
-
-            Intent intent = AttractionActivity.newIntent(mContext, name, image, desc);
+            Intent intent = AttractionActivity.newIntent(mContext, attraction);
             mContext.startActivity(intent);
         });
     }

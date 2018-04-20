@@ -2,6 +2,7 @@ package com.example.android.tourfc;
 
 import android.content.Context;
 import android.content.Intent;
+import android.support.annotation.NonNull;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -38,8 +39,9 @@ public class MasterAdapter
         this.mContext = context;
     }
 
+    @NonNull
     @Override
-    public SectionViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public SectionViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         // Inflate the layout outlined in card for individual row item and
         // Get the layout inflater from the parent view group,
         // which is parsed from R.layout.activity_main, and the inflated view is not attached to root
@@ -58,7 +60,7 @@ public class MasterAdapter
      */
     @SuppressWarnings("ConstantConditions")
     @Override
-    public void onBindViewHolder(SectionViewHolder holder, final int position) {
+    public void onBindViewHolder(@NonNull SectionViewHolder holder, final int position) {
         // Get the data item that is being called to display
         final AttractionCollection currentCollection = mData.get(position);
 

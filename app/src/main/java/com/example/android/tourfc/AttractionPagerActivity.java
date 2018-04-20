@@ -68,7 +68,7 @@ public class AttractionPagerActivity extends AppCompatActivity {
             @Override
             public Fragment getItem(int position) {
                 Attraction attraction = attractions.get(position);
-                return AttractionFragment.newInstance(attraction.getTitle(), attraction.getImageResourceId(), attraction.getLongDesc());
+                return AttractionFragment.newInstance(attraction);
             }
         });
 

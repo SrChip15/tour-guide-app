@@ -1,6 +1,8 @@
 package com.example.android.tourfc.model;
 
-public class Attraction {
+import java.io.Serializable;
+
+public class Attraction implements Serializable{
 
     /** Image resource ID for the image file associated with the attraction */
     private int imageResourceId;
@@ -14,6 +16,9 @@ public class Attraction {
     /** Long description of the attraction */
     private int longDescTextResId;
 
+    /** Map Query String of attraction */
+    private int mapQueryStrId;
+
     /**
      * Create data object that holds all the details of an attraction including an image resource
      * for the attraction
@@ -22,11 +27,13 @@ public class Attraction {
      * @param titleTextResId           a String value for the name of the attraction
      * @param shortDescTextResId     a String value for a brief description of the attraction
      */
-    public Attraction(int imageResourceId, int titleTextResId, int shortDescTextResId, int longDescTextResId) {
+    public Attraction(int imageResourceId, int titleTextResId, int shortDescTextResId, int longDescTextResId, int mapQueryStrId) {
         this.imageResourceId = imageResourceId;
         this.titleTextResId = titleTextResId;
         this.shortDescTextResId = shortDescTextResId;
         this.longDescTextResId = longDescTextResId;
+        this.mapQueryStrId = mapQueryStrId;
+
     }
 
     public int getImageResourceId() {
@@ -43,5 +50,9 @@ public class Attraction {
 
     public int getLongDesc() {
         return longDescTextResId;
+    }
+
+    public int getMapQueryStrId() {
+        return mapQueryStrId;
     }
 }

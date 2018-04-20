@@ -1,5 +1,7 @@
 package com.example.android.tourfc;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -7,25 +9,23 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.android.tourfc.model.Attraction;
+
 
 public class AttractionFragment extends Fragment {
+    /* Class Constants */
+    private static final String ARG_ATTRACTION = "attraction";
 
-    private static final String ARG_NAME = "nameResId";
-    private static final String ARG_IMAGE_ID = "imageResId";
-    private static final String ARG_DESC_ID = "descResId";
+    private Button showInMapButton;
+    private Attraction attraction;
 
-    private int titleResId;
-    private int imageResId;
-    private int descriptionTextResId;
-
-    public static AttractionFragment newInstance(int nameResId, int drawableResId, int descResId) {
+    public static AttractionFragment newInstance(Attraction attraction) {
         Bundle args = new Bundle();
-        args.putInt(ARG_NAME, nameResId);
-        args.putInt(ARG_IMAGE_ID, drawableResId);
-        args.putInt(ARG_DESC_ID, descResId);
+        args.putSerializable(ARG_ATTRACTION, attraction);
 
         AttractionFragment fragment = new AttractionFragment();
         fragment.setArguments(args);
@@ -36,9 +36,7 @@ public class AttractionFragment extends Fragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        titleResId = getArguments().getInt(ARG_NAME);
-        imageResId = getArguments().getInt(ARG_IMAGE_ID);
-        descriptionTextResId = getArguments().getInt(ARG_DESC_ID);
+        attraction = (Attraction) getArguments().getSerializable(ARG_ATTRACTION);
     }
 
     @Nullable
@@ -48,24 +46,19 @@ public class AttractionFragment extends Fragment {
 
         // Grab a handle on the image view
         ImageView detailImageView = view.findViewById(R.id.detail_image_view);
-        detailImageView.setImageResource(imageResId);
+        detailImageView.setImageResource(attraction.getImageResourceId());
 
         // grab a handle on the text view
         TextView textView = view.findViewById(R.id.detail_long_desc_tv);
-        textView.setText(descriptionTextResId);
+        textView.setText(attraction.getLongDesc());
+
+        showInMapButton = view.findViewById(R.id.detail_show_in_map_button);
+        showInMapButton.setOnClickListener(v -> {
+            Uri location = Uri.parse(getString(attraction.getMapQueryStrId()));
+            showMap(location);
+        });
 
         return view;
-    }
-
-    /*
-    public void showOnMap(View view) {
-        // Parse the uri with the longitude and latitude
-        // along with the label for the attraction
-        Uri location = Uri
-                .parse("geo:0,0?q=40.5872139,-105.0766288(Social)");
-
-        // Pass the parsed uri string to the method that creates map intent
-        showMap(location);
     }
 
     public void showMap(Uri geoLocation) {
@@ -75,11 +68,9 @@ public class AttractionFragment extends Fragment {
         // Make the intent explicit by setting Google Maps package
         mapIntent.setPackage("com.google.android.apps.maps");
 
-        // Check for suitable package that can handle the intent
-        // Gracefully handles situations where the host system does not have the required package
-        // to handle the intent
-        if (mapIntent.resolveActivity(getPackageManager()) != null) {
+        // Attempt to start an activity that can handle the Intent w/o crashing the app
+        if (mapIntent.resolveActivity(getActivity().getPackageManager()) != null) {
             startActivity(mapIntent);
         }
-    }*/
+    }
 }

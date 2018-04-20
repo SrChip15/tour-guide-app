@@ -62,35 +62,40 @@ public class AttractionRepository {
                         R.drawable.horsetooth_mountain_park,
                         R.string.horsetooth_mountain_title,
                         R.string.scenic_open_space,
-                        R.string.horsetooth_mountain_park_detailed_desc
+                        R.string.horsetooth_mountain_park_detailed_desc,
+                        R.string.mq_horestooth_mountain_park
                 )
         );
         attractions.add(new Attraction(
                         R.drawable.whitewater_rafting,
                         R.string.mountain_whitewater_title,
                         R.string.white_water_rafting,
-                        R.string.mountain_whitewater_descents_detailed_desc
+                        R.string.mountain_whitewater_descents_detailed_desc,
+                        R.string.mq_mountain_whitewater
                 )
         );
         attractions.add(new Attraction(
                         R.drawable.flower_trail_garden,
                         R.string.flower_trial_garden_title,
                         R.string.horticulture_display,
-                        R.string.flower_trail_garden_detailed_desc
+                        R.string.flower_trail_garden_detailed_desc,
+                        R.string.mq_annual_flower_trial_garden
                 )
         );
         attractions.add(new Attraction(
                         R.drawable.horsetooth_reservoir,
                         R.string.horsetooth_reservoir_title,
                         R.string.best_outdoors,
-                        R.string.horsetooth_reservoir_detailed_desc
+                        R.string.horsetooth_reservoir_detailed_desc,
+                        R.string.mq_horestooth_reservoir
                 )
         );
         attractions.add(new Attraction(
                         R.drawable.city_park,
                         R.string.city_park_title,
                         R.string.ideal_relaxing_spot,
-                        R.string.city_park_detailed_desc
+                        R.string.city_park_detailed_desc,
+                        R.string.mq_city_park
                 )
         );
 
@@ -105,49 +110,56 @@ public class AttractionRepository {
                         R.drawable.the_melting_pot,
                         R.string.melting_pot_title,
                         R.string.amazing_fondue,
-                        R.string.the_melting_pot_detailed_desc
+                        R.string.the_melting_pot_detailed_desc,
+                        R.string.mq_the_melting_pot
                 )
         );
         attractions.add(new Attraction(
                         R.drawable.maza_kabob,
                         R.string.maza_kabob_title,
                         R.string.afghan_specialty,
-                        R.string.maza_kabob_detailed_desc
+                        R.string.maza_kabob_detailed_desc,
+                        R.string.mq_maza_kabob
                 )
         );
         attractions.add(new Attraction(
                         R.drawable.rio_grande,
                         R.string.rio_grande_title,
                         R.string.amazing_margarita,
-                        R.string.rio_grande_detailed_desc
+                        R.string.rio_grande_detailed_desc,
+                        R.string.mq_rio_grande
                 )
         );
         attractions.add(new Attraction(
                         R.drawable.star_of_india,
                         R.string.star_of_india_title,
                         R.string.indian_buffet,
-                        R.string.star_of_india_detailed_desc
+                        R.string.star_of_india_detailed_desc,
+                        R.string.mq_star_of_india
                 )
         );
         attractions.add(new Attraction(
                         R.drawable.lucile_creole,
                         R.string.lucile_title,
                         R.string.breakfast_place,
-                        R.string.lucile_creole_detailed_desc
+                        R.string.lucile_creole_detailed_desc,
+                        R.string.mq_lucile
                 )
         );
         attractions.add(new Attraction(
                         R.drawable.cafe_athens,
                         R.string.cafe_athens_title,
                         R.string.greek_mediterranean,
-                        R.string.cafe_athens_detailed_desc
+                        R.string.cafe_athens_detailed_desc,
+                        R.string.mq_cafe_athens
                 )
         );
         attractions.add(new Attraction(
                         R.drawable.cafe_de_bangkok,
                         R.string.cafe_de_bangkok_title,
                         R.string.traditional_thai,
-                        R.string.cafe_de_bangkok_detailed_desc
+                        R.string.cafe_de_bangkok_detailed_desc,
+                        R.string.mq_cafe_de_bangkok
                 )
         );
 
@@ -162,28 +174,32 @@ public class AttractionRepository {
                         R.drawable.new_belgium,
                         R.string.new_belgium_title,
                         R.string.new_belgium_free_tours,
-                        R.string.new_belgium_detailed_desc
+                        R.string.new_belgium_detailed_desc,
+                        R.string.mq_new_belgium
                 )
         );
         attractions.add(new Attraction(
                         R.drawable.odell_brewing,
                         R.string.odell_brewing_title,
                         R.string.odell_microbrew,
-                        R.string.odell_brewing_detailed_desc
+                        R.string.odell_brewing_detailed_desc,
+                        R.string.mq_odell_brewing
                 )
         );
         attractions.add(new Attraction(
                         R.drawable.anheuser_busch,
                         R.string.anheuser_busch_title,
                         R.string.grand_tour,
-                        R.string.anheuser_busch_detailed_desc
+                        R.string.anheuser_busch_detailed_desc,
+                        R.string.mq_anheuser_busch
                 )
         );
         attractions.add(new Attraction(
                         R.drawable.coopersmith_brewing,
                         R.string.coopersmith_title,
                         R.string.coopersmith_mixed_desc,
-                        R.string.coopersmith_detailed_desc
+                        R.string.coopersmith_detailed_desc,
+                        R.string.mq_coopersmith
                 )
         );
 
@@ -198,35 +214,40 @@ public class AttractionRepository {
                         R.drawable.social,
                         R.string.social_title,
                         R.string.creative_cocktails,
-                        R.string.social_detailed_desc
+                        R.string.social_detailed_desc,
+                        R.string.mq_social
                 )
         );
         attractions.add(new Attraction(
                         R.drawable.mayor_old_town,
                         R.string.mayor_old_town_title,
                         R.string.mayor_great_selction,
-                        R.string.mayor_of_old_town_detailed_desc
+                        R.string.mayor_of_old_town_detailed_desc,
+                        R.string.mq_mayor_old_town
                 )
         );
         attractions.add(new Attraction(
                         R.drawable.colorado_room,
                         R.string.colorado_room_title,
                         R.string.colorado_beers_and_spirits,
-                        R.string.the_colorado_room_detailed_desc
+                        R.string.the_colorado_room_detailed_desc,
+                        R.string.mq_the_colorado_room
                 )
         );
         attractions.add(new Attraction(
                         R.drawable.ace_gilletts,
                         R.string.ace_gilletts_title,
                         R.string.gilletts_crafted_beers,
-                        R.string.ace_gilletts_detailed_desc
+                        R.string.ace_gilletts_detailed_desc,
+                        R.string.mq_coopersmith
                 )
         );
         attractions.add(new Attraction(
                         R.drawable.elliot_martini_bar,
                         R.string.elliots_martini_title,
                         R.string.elliot_martini_variety,
-                        R.string.elliot_martini_bar_detailed_desc
+                        R.string.elliot_martini_bar_detailed_desc,
+                        R.string.mq_elliot_martini_bar
                 )
         );
 
