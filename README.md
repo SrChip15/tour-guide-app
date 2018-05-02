@@ -33,6 +33,11 @@ width="250"/>
 <img src="https://raw.githubusercontent.com/SrChip15/tour-guide-app/master/detail_view.png"
 width="250"/>
 
+Demo
+----
+
+<img src="https://raw.githubusercontent.com/SrChip15/tour-guide-app/master/demo.gif" width="250"/>
+
 License
 --------
 ```
