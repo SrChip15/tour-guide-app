@@ -3,6 +3,7 @@ package com.example.android.tourfc;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
+import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.util.TypedValue;
@@ -53,8 +54,9 @@ class SingleAttractionDataAdapter
      *                 to the root view
      * @return the {@link SingleAttractionViewHolder} that has a backing inflated layout
      */
+    @NonNull
     @Override
-    public SingleAttractionViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public SingleAttractionViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.attraction_card, parent, false);
         return new SingleAttractionViewHolder(view);
     }
@@ -69,7 +71,7 @@ class SingleAttractionDataAdapter
      *                 user
      */
     @Override
-    public void onBindViewHolder(SingleAttractionViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull SingleAttractionViewHolder holder, int position) {
 
         final Attraction attraction = mAttractions.get(position);
 

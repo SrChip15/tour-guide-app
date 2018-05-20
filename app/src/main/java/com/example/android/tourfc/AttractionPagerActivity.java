@@ -16,6 +16,7 @@ import com.example.android.tourfc.model.AttractionRepository;
 
 import java.util.List;
 
+@SuppressWarnings("FieldCanBeLocal")
 public class AttractionPagerActivity extends AppCompatActivity {
     /* Class variables */
     private ViewPager viewPager;

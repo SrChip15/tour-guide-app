@@ -34,7 +34,7 @@ public class MasterAdapter
      *
      * @param data an {@link ArrayList} of Attraction data object
      */
-    public MasterAdapter(Context context, List<AttractionCollection> data) {
+    MasterAdapter(Context context, List<AttractionCollection> data) {
         this.mData = data;
         this.mContext = context;
     }

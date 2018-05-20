@@ -16,6 +16,7 @@ import com.example.android.tourfc.model.AttractionRepository;
 import java.util.List;
 
 
+@SuppressWarnings("FieldCanBeLocal")
 public class AttractionListFragment extends Fragment {
     /* Class Constants */
     private static final String ARG_SECTION_TITLE = "sectionTitle";
@@ -40,8 +41,10 @@ public class AttractionListFragment extends Fragment {
         super.onCreate(savedInstanceState);
         setRetainInstance(true);
 
-        sectionTitle = getArguments().getInt(ARG_SECTION_TITLE);
-        Log.d(TAG, "onCreate: section title = " + sectionTitle);
+        if (getArguments() != null) {
+            sectionTitle = getArguments().getInt(ARG_SECTION_TITLE);
+            Log.d(TAG, "onCreate: section title = " + sectionTitle);
+        }
     }
 
     @Nullable

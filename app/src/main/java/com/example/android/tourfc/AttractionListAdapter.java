@@ -35,7 +35,7 @@ class AttractionListAdapter extends ArrayAdapter<Attraction> {
      * @param context     holds the {@link Context} of the {@link android.widget.ListView}
      * @param attractions an {@link ArrayList} of {@link Attraction} objects
      */
-    public AttractionListAdapter(@NonNull Context context, List<Attraction> attractions, int sectionTitle) {
+    AttractionListAdapter(@NonNull Context context, List<Attraction> attractions, int sectionTitle) {
         super(context, 0, attractions);
         mAttractions = new ArrayList<>();
         mAttractions = attractions;

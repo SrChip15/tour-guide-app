@@ -20,6 +20,7 @@ public class AttractionFragment extends Fragment {
     /* Class Constants */
     private static final String ARG_ATTRACTION = "attraction";
 
+    @SuppressWarnings("FieldCanBeLocal")
     private Button showInMapButton;
     private Attraction attraction;
 

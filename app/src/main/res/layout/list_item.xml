@@ -21,11 +21,9 @@
         android:layout_height="@dimen/list_item_height"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
         android:padding="8dp"
         android:layout_alignParentTop="true"
         android:layout_toEndOf="@id/list_item_image"
-        android:layout_toRightOf="@id/list_item_image"
         android:orientation="vertical">
 
         <TextView
@@ -56,10 +54,8 @@
         android:layout_width="24dp"
         android:layout_height="24dp"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
         android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
         android:contentDescription="@string/list_item_right_arrow_image_content_desc"
         app:srcCompat="@drawable/ic_keyboard_arrow_right_black_24dp"/>
 
