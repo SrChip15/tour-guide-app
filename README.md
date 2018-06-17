@@ -28,7 +28,7 @@ Screenshots
 
 <img src="https://raw.githubusercontent.com/SrChip15/tour-guide-app/master/splash_screen.png"
 width="250"/>
-<img src="https://raw.githubusercontent.com/SrChip15/tour-guide-app/master/list_view.png"
+<img src="https://github.com/SrChip15/tour-guide-app/blob/master/list_view_tourfc.png"
 width="250"/>
 <img src="https://raw.githubusercontent.com/SrChip15/tour-guide-app/master/detail_view.png"
 width="250"/>
@@ -36,7 +36,7 @@ width="250"/>
 Demo
 ----
 
-<img src="https://raw.githubusercontent.com/SrChip15/tour-guide-app/master/demo.gif" width="250"/>
+<img src="https://github.com/SrChip15/tour-guide-app/blob/master/updated_demo_06172018.gif" width="250"/>
 
 License
 --------
