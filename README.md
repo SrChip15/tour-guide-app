@@ -18,7 +18,7 @@ Tools
 ------
 
 * Gradle v4.4
-* Android Plugin v3.1.1
+* Android Plugin v3.1.3
 * Support Library v27.1.1
 * Android API v27
 * Android Build Tools v27
