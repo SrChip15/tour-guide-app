@@ -20,13 +20,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 class AttractionListAdapter extends ArrayAdapter<Attraction> {
-
-    /** Layout inflater to inflate custom layout */
+    
     private LayoutInflater mLayoutInflater;
-
-    /** ArrayList for {@link Attraction} object */
     private List<Attraction> mAttractions;
-
     private int sectionTitle;
 
     /**
@@ -86,7 +82,8 @@ class AttractionListAdapter extends ArrayAdapter<Attraction> {
 
         // Setup and register OnClickListener to navigate to the appropriate activity
         listRow.setOnClickListener(v -> {
-            Intent intent = AttractionPagerActivity.newIntent(getContext(), sectionTitle, currentAttraction.getTitle());
+            Intent intent = AttractionPagerActivity
+                    .newIntent(getContext(), sectionTitle, currentAttraction.getTitle());
             getContext().startActivity(intent);
         });
 

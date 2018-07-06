@@ -23,17 +23,10 @@ import java.util.List;
  */
 class SingleAttractionDataAdapter
         extends RecyclerView.Adapter<SingleAttractionDataAdapter.SingleAttractionViewHolder> {
-
-    /**
-     * Holds list of Attraction class object
-     */
+    
     private List<Attraction> mAttractions;
-
-    /**
-     * Hold context information to manipulate the application environment
-     */
     private Context mContext;
-
+    
     /**
      * Create the adapter for a single Attraction class object
      *
@@ -44,7 +37,7 @@ class SingleAttractionDataAdapter
         this.mAttractions = attractions;
         this.mContext = context;
     }
-
+    
     /**
      * This method is called when a new {@link RecyclerView.ViewHolder} is required by the
      * recycler view to display an {@link Attraction} item
@@ -57,10 +50,11 @@ class SingleAttractionDataAdapter
     @NonNull
     @Override
     public SingleAttractionViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.attraction_card, parent, false);
+        View view = LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.attraction_card, parent, false);
         return new SingleAttractionViewHolder(view);
     }
-
+    
     /**
      * This method is responsible for mapping data to the item that is being currently displayed to
      * the user
@@ -72,25 +66,25 @@ class SingleAttractionDataAdapter
      */
     @Override
     public void onBindViewHolder(@NonNull SingleAttractionViewHolder holder, int position) {
-
+        
         final Attraction attraction = mAttractions.get(position);
-
+        
         // Convert px to dips
         // Grab the context's resources
         Resources r = mContext.getResources();
-
+        
         // Convert image's width dimension in pixels to dips to fit the card layout
         int imageWidth = (int) TypedValue.applyDimension(
                 TypedValue.COMPLEX_UNIT_DIP,
                 300,
                 r.getDisplayMetrics());
-
+        
         // Convert image's height dimension in pixels to dips to fit the card layout
         int imageHeight = (int) TypedValue.applyDimension(
                 TypedValue.COMPLEX_UNIT_DIP,
                 150,
                 r.getDisplayMetrics());
-
+        
         // Set the image file to be displayed for the attraction
         // Load scaled down version of image file into memory
         holder.attractionImage
@@ -100,13 +94,13 @@ class SingleAttractionDataAdapter
                                 attraction.getImageResourceId(),
                                 imageWidth, // previous value 200
                                 imageHeight)); // previous value 100
-
+        
         // Set the title of the attraction
         holder.attractionTitle.setText(attraction.getTitle());
-
+        
         // Set the description of the attraction
         holder.attractionBriefDescription.setText(attraction.getShortDesc());
-
+        
         // Setup and register {@link OnClickListener} to the {@link CardView} that is displaying
         // the {@link Attraction} item
         holder.attractionCardView.setOnClickListener(v -> {
@@ -114,7 +108,7 @@ class SingleAttractionDataAdapter
             mContext.startActivity(intent);
         });
     }
-
+    
     /**
      * Provides information to the adapter on how many items are present in the data set
      *
@@ -122,9 +116,9 @@ class SingleAttractionDataAdapter
      */
     @Override
     public int getItemCount() {
-        return mAttractions.size();
+        return mAttractions == null ? 0 : mAttractions.size();
     }
-
+    
     /**
      * Nested inner class that provides the adapter with cached expensive findViewById results
      * Basically, a custom {@link RecyclerView.ViewHolder} implementation to handle the complexity
@@ -132,19 +126,12 @@ class SingleAttractionDataAdapter
      */
     static class SingleAttractionViewHolder
             extends RecyclerView.ViewHolder {
-
-        /** Holds {@link ImageView} from the layout that is inflated via the onCreateViewHolder */
+        
         ImageView attractionImage;
-
-        /** Hold {@link TextView} from the layout that is inflated via the onCreateViewHolder */
         TextView attractionTitle;
-
-        /** Hold {@link TextView} from the layout that is inflated via the onCreateViewHolder */
         TextView attractionBriefDescription;
-
-        /** Holds {@link CardView} from the layout that is inflated via the onCreateViewHolder */
         CardView attractionCardView;
-
+        
         /**
          * This is the method that handles caching of the findViewById results to avoid repeatedly
          * performing such expensive tasks
@@ -153,19 +140,11 @@ class SingleAttractionDataAdapter
          */
         SingleAttractionViewHolder(View itemView) {
             super(itemView);
-
-            // Grab a handle on the {@link CardView} of the {@link ViewGroup}
+            
             attractionCardView = itemView.findViewById(R.id.attraction_card_view);
-
-            // Grab a handle on the {@link ImageView} of the {@link ViewGroup}
             attractionImage = itemView.findViewById(R.id.attraction_image_view);
-
-            // Grab a handle on the title {@link TextView} of the {@link ViewGroup}
             attractionTitle = itemView.findViewById(R.id.attraction_title_text_view);
-
-            // Grab a handle on the description {@link TextView} of the {@link ViewGroup}
-            attractionBriefDescription = itemView
-                    .findViewById(R.id.attraction_brief_desc_text_view);
+            attractionBriefDescription = itemView.findViewById(R.id.attraction_brief_desc_text_view);
         }
     }
 }

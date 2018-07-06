@@ -21,12 +21,8 @@ import java.util.List;
 
 public class MasterAdapter
         extends RecyclerView.Adapter<MasterAdapter.SectionViewHolder> {
-
-    /**
-     * Attractions data stored as an AttractionDetail object in an {@link ArrayList}
-     */
+    
     private List<AttractionCollection> mData;
-
     private Context mContext;
 
     /**
@@ -124,7 +120,7 @@ public class MasterAdapter
     /** Returns the number of attractions in the attractions list */
     @Override
     public int getItemCount() {
-        return mData.size();
+        return mData == null ? 0 : mData.size();
     }
 
     /**
@@ -156,8 +152,12 @@ public class MasterAdapter
             showAllClickable.setOnClickListener(v -> {
                 // Declare intent to navigate to the correct activity requested by the user
                 int sectionResId = Utils.resolveStringToResId(context, sectionTitle.getText());
-                if (sectionResId == 0) throw new IllegalArgumentException("Unexpected section header value received from ShowAll click listener");
-                Intent passToActivity = AttractionListActivity.newIntent(context, Utils.resolveStringToResId(context, sectionTitle.getText()));
+                if (sectionResId == 0) {
+                    throw new IllegalArgumentException("Unexpected section header value " +
+                            "received from ShowAll click listener");
+                }
+                Intent passToActivity = AttractionListActivity
+                        .newIntent(context, Utils.resolveStringToResId(context, sectionTitle.getText()));
                 context.startActivity(passToActivity);
             });
         }
