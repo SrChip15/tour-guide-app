@@ -204,25 +204,26 @@
     <string name="detail_image_cd">Image of Attraction</string>
 
     <!-- Map query strings -->
-    <string name="mq_ace_gilletts">geo:0,0?q=40.5846007,-105.0795316(Ace+Gillett\'s+Lounge)</string>
-    <string name="mq_anheuser_busch">geo:0,0?q=40.6095395,-105.0222495(Anheuser+Busch)</string>
-    <string name="mq_cafe_athens">geo:0,0?q=40.5258031,-105.02654(Cafe+Athens)</string>
-    <string name="mq_cafe_de_bangkok">geo:0,0?q=40.5753557,-105.1014222(Café+de+Bangkok)</string>
-    <string name="mq_city_park">geo:0,0?q=40.5852196,-105.1097394(City+Park)</string>
-    <string name="mq_the_colorado_room">geo:0,0?q=40.5852196,-105.1097394(City+Park)</string>
-    <string name="mq_coopersmith">geo:0,0?q=" + Uri.encode(Coopersmith\'s+Pub+&amp;+Brewing)</string>
-    <string name="mq_elliot_martini_bar">geo:0,0?q=40.5884398,-105.0766902(Elliot\'s+Martini+Bar)</string>
-    <string name="mq_annual_flower_trial_garden">geo:0,0?q=40.5693881,-105.078206(Annual+Flower+Trial+Garden)</string>
-    <string name="mq_horestooth_mountain_park">geo:0,0?q=40.5227036,-105.1827149(Horsetooth+Mountain+Park)</string>
-    <string name="mq_horestooth_reservoir">geo:0,0?q=40.5527509,-105.2308442(Horsetooth+Reservoir)</string>
-    <string name="mq_lucile">geo:0,0?q=40.5826753,-105.0843392(Lucile\'s)</string>
-    <string name="mq_mayor_old_town">geo:0,0?q=40.5789011,-105.0808697(The+Mayor+of+Old+Town)</string>
-    <string name="mq_maza_kabob">geo:0,0?q=40.5551019,-105.0802294(Maza+Kabob)</string>
-    <string name="mq_the_melting_pot">geo:0,0?q=40.5872231,-105.0753147(The+Melting+Pot)</string>
-    <string name="mq_mountain_whitewater">geo:0,0?q=40.6251781,-105.1027507(Mountain+Whitewater+Descents)</string>
-    <string name="mq_new_belgium">geo:0,0?q=40.5932417,-105.0707897(New+Belgium+Brewing+Company)</string>
-    <string name="mq_odell_brewing">geo:0,0?q=40.5894715,-105.0653706(Odell+Brewing+Company)</string>
-    <string name="mq_rio_grande">geo:0,0?q=40.5868433,-105.0804194(Rio+Grande+Restaurant)</string>
-    <string name="mq_social">geo:0,0?q=40.5872139,-105.0766288(Social)</string>
-    <string name="mq_star_of_india">geo:0,0?q=40.5491001,-105.0782227(Star+of+India)</string>
+    <string name="mq_ace_gilletts">geo:0,0?q=Ace+Gillett\'s+Lounge+Fort+Collins</string>
+    <string name="mq_anheuser_busch">geo:0,0?q=Anheuser+Busch+Fort+Collins</string>
+    <string name="mq_cafe_athens">geo:0,0?q=Cafe+Athens+Fort+Collins</string>
+    <string name="mq_cafe_de_bangkok">geo:0,0?q=Café+de+Bangkok+Fort+Collins</string>
+    <string name="mq_city_park">geo:0,0?q=City+Park+Fort+Collins</string>
+    <string name="mq_the_colorado_room">geo:0,0?q=Colorado+Room+Fort+Collins</string>
+    <string name="mq_coopersmith">geo:0,0?q=Coopersmith\'s+Pub+&amp;+Brewing+Fort+Collins)</string>
+    <string name="mq_elliot_martini_bar">geo:0,0?q=Elliot\'s+Martini+Bar+Fort+Collins</string>
+    <string name="mq_annual_flower_trial_garden">geo:0,0?q=Annual+Flower+Trial+Garden+Fort+Collins</string>
+    <string name="mq_horestooth_mountain_park">geo:0,0?q=Horsetooth+Mountain+Park+Fort+Collins</string>
+    <string name="mq_horestooth_reservoir">geo:0,0?q=Horsetooth+Reservoir+Fort+Collins</string>
+    <string name="mq_lucile">geo:0,0?q=Lucile\'s+Fort+Collins</string>
+    <string name="mq_mayor_old_town">geo:0,0?q=The+Mayor+of+Old+Town+Fort+Collins</string>
+    <string name="mq_maza_kabob">geo:0,0?q=Maza+Kabob+Fort+Collins</string>
+    <string name="mq_the_melting_pot">geo:0,0?q=The+Melting+Pot+Fort+Collins</string>
+    <string name="mq_mountain_whitewater">geo:0,0?q=Mountain+Whitewater+Descents+Fort+Collins</string>
+    <string name="mq_new_belgium">geo:0,0?q=New+Belgium+Brewing+Company+Fort+Collins</string>
+    <string name="mq_odell_brewing">geo:0,0?q=Odell+Brewing+Company+Fort+Collins</string>
+    <string name="mq_rio_grande">geo:0,0?q=Rio+Grande+Restaurant+Fort+Collins</string>
+    <string name="mq_social">geo:0,0?q=Social+Fort+Collins</string>
+    <string name="mq_star_of_india">geo:0,0?q=Star+of+India+Fort+Collins</string>
+
 </resources>

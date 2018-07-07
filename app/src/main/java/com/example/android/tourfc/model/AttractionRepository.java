@@ -1,6 +1,7 @@
 package com.example.android.tourfc.model;
 
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.support.annotation.VisibleForTesting;
 
@@ -11,9 +12,9 @@ import java.util.List;
 
 public class AttractionRepository {
 
-    private Context context;
+    @SuppressWarnings({"FieldCanBeLocal", "unused"}) private Context context;
     private List<AttractionCollection> collections;
-    private static AttractionRepository attractionRepository;
+    @SuppressLint("StaticFieldLeak") private static AttractionRepository attractionRepository;
 
     public static AttractionRepository getInstance(Context packageContext) {
         if (attractionRepository == null) {
@@ -239,7 +240,7 @@ public class AttractionRepository {
                         R.string.ace_gilletts_title,
                         R.string.gilletts_crafted_beers,
                         R.string.ace_gilletts_detailed_desc,
-                        R.string.mq_coopersmith
+                        R.string.mq_ace_gilletts
                 )
         );
         attractions.add(new Attraction(

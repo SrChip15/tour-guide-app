@@ -62,6 +62,7 @@ public class AttractionFragment extends Fragment {
         return view;
     }
 
+    @SuppressWarnings("ConstantConditions")
     public void showMap(Uri geoLocation) {
         // Initialize the map intent with an action and the geolocation parameter
         Intent mapIntent = new Intent(Intent.ACTION_VIEW, geoLocation);
