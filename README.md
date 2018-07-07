@@ -17,11 +17,11 @@ Specs
 Tools
 ------
 
-* Gradle v4.4
-* Android Plugin v3.1.3
-* Support Library v27.1.1
-* Android API v27
-* Android Build Tools v27
+* Gradle 4.4
+* Android Gradle Plugin 3.1.3
+* Support Library 27.1.1
+* Android API 27
+* Android Build Tools 27
 
 Screenshots
 ------------
