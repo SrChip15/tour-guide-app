@@ -22,8 +22,7 @@
             android:layout_width="@dimen/attraction_card_image_view_width"
             android:layout_height="@dimen/attraction_card_image_view_height"
             android:contentDescription="@string/attraction_card_image_view_content_desc"
-            android:scaleType="centerCrop"
-            android:src="@drawable/sample" />
+            android:scaleType="centerCrop" />
 
         <!-- This is the TextView that displays the title of the attraction -->
         <TextView
