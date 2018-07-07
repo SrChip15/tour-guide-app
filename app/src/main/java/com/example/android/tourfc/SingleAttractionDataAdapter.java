@@ -2,11 +2,9 @@ package com.example.android.tourfc;
 
 import android.content.Context;
 import android.content.Intent;
-import android.content.res.Resources;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
-import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,7 +13,6 @@ import android.widget.TextView;
 
 import com.example.android.tourfc.model.Attraction;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -30,8 +27,8 @@ class SingleAttractionDataAdapter
     /**
      * Create the adapter for a single Attraction class object
      *
-     * @param context     a {@link Context} to get a handle on the application's environment
-     * @param attractions a {@link ArrayList} of {@link Attraction}
+     * @param context     to get a handle on the application's environment
+     * @param attractions ArrayList of Attractions
      */
     SingleAttractionDataAdapter(Context context, List<Attraction> attractions) {
         this.mAttractions = attractions;
@@ -69,31 +66,13 @@ class SingleAttractionDataAdapter
         
         final Attraction attraction = mAttractions.get(position);
         
-        // Convert px to dips
-        // Grab the context's resources
-        Resources r = mContext.getResources();
-        
-        // Convert image's width dimension in pixels to dips to fit the card layout
-        int imageWidth = (int) TypedValue.applyDimension(
-                TypedValue.COMPLEX_UNIT_DIP,
-                300,
-                r.getDisplayMetrics());
-        
-        // Convert image's height dimension in pixels to dips to fit the card layout
-        int imageHeight = (int) TypedValue.applyDimension(
-                TypedValue.COMPLEX_UNIT_DIP,
-                150,
-                r.getDisplayMetrics());
-        
         // Set the image file to be displayed for the attraction
         // Load scaled down version of image file into memory
         holder.attractionImage
                 .setImageBitmap(ScaledImages
                         .decodeSampledBitmapFromResource(
                                 mContext.getResources(),
-                                attraction.getImageResourceId(),
-                                imageWidth, // previous value 200
-                                imageHeight)); // previous value 100
+                                attraction.getImageResourceId()));
         
         // Set the title of the attraction
         holder.attractionTitle.setText(attraction.getTitle());
@@ -101,8 +80,7 @@ class SingleAttractionDataAdapter
         // Set the description of the attraction
         holder.attractionBriefDescription.setText(attraction.getShortDesc());
         
-        // Setup and register {@link OnClickListener} to the {@link CardView} that is displaying
-        // the {@link Attraction} item
+        // Setup and register OnClickListener to the CardView that is displaying the item
         holder.attractionCardView.setOnClickListener(v -> {
             Intent intent = AttractionActivity.newIntent(mContext, attraction);
             mContext.startActivity(intent);
