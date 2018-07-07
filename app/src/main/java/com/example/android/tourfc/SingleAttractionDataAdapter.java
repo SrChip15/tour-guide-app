@@ -2,7 +2,11 @@ package com.example.android.tourfc;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.os.AsyncTask;
 import android.support.annotation.NonNull;
+import android.support.v4.util.LruCache;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -21,8 +25,40 @@ import java.util.List;
 class SingleAttractionDataAdapter
         extends RecyclerView.Adapter<SingleAttractionDataAdapter.SingleAttractionViewHolder> {
     
+    /**
+     * Nested inner class that provides the adapter with cached expensive findViewById results
+     * Basically, a custom RecyclerView.ViewHolder implementation to handle the complexity
+     * of the item that is to be displayed by the RecyclerView
+     */
+    static class SingleAttractionViewHolder
+            extends RecyclerView.ViewHolder {
+        
+        ImageView attractionImage;
+        TextView attractionTitle;
+        TextView attractionBriefDescription;
+        CardView attractionCardView;
+        
+        /**
+         * This is the method that handles caching of the findViewById results to avoid repeatedly
+         * performing such expensive tasks
+         *
+         * @param itemView holds the ViewGroup information of the inflated view
+         */
+        SingleAttractionViewHolder(View itemView) {
+            super(itemView);
+            
+            attractionCardView = itemView.findViewById(R.id.attraction_card_view);
+            attractionImage = itemView.findViewById(R.id.attraction_image_view);
+            attractionTitle = itemView.findViewById(R.id.attraction_title_text_view);
+            attractionBriefDescription = itemView.findViewById(R.id.attraction_brief_desc_text_view);
+        }
+    }
+    
     private List<Attraction> mAttractions;
     private Context mContext;
+    private LruCache<String, Bitmap> memoryCache;
+    
+    public static final int CARD_SIZE_IMAGE_DECODE = 333;
     
     /**
      * Create the adapter for a single Attraction class object
@@ -33,6 +69,16 @@ class SingleAttractionDataAdapter
     SingleAttractionDataAdapter(Context context, List<Attraction> attractions) {
         this.mAttractions = attractions;
         this.mContext = context;
+        
+        final int totalMemory = (int) (Runtime.getRuntime().totalMemory() / 1024);
+        final int cacheSize = totalMemory / 5;
+        
+        memoryCache = new LruCache<String, Bitmap>(cacheSize) {
+            @Override
+            protected int sizeOf(String key, Bitmap bitmap) {
+                return bitmap.getByteCount() / 1024;
+            }
+        };
     }
     
     /**
@@ -68,11 +114,15 @@ class SingleAttractionDataAdapter
         
         // Set the image file to be displayed for the attraction
         // Load scaled down version of image file into memory
-        holder.attractionImage
-                .setImageBitmap(ScaledImages
-                        .decodeSampledBitmapFromResource(
-                                mContext.getResources(),
-                                attraction.getImageResourceId()));
+        String imageKey = String.valueOf(attraction.getImageResourceId());
+        if (getBitmapFromMemCache(imageKey) != null) {
+            // exists in cache
+            holder.attractionImage.setImageBitmap(getBitmapFromMemCache(imageKey));
+        } else {
+            // run down scaler task (add to cache within task)
+            new DownscaleImagesTask(mContext.getResources(), memoryCache, holder)
+                    .execute(attraction.getImageResourceId());
+        }
         
         // Set the title of the attraction
         holder.attractionTitle.setText(attraction.getTitle());
@@ -97,32 +147,39 @@ class SingleAttractionDataAdapter
         return mAttractions == null ? 0 : mAttractions.size();
     }
     
-    /**
-     * Nested inner class that provides the adapter with cached expensive findViewById results
-     * Basically, a custom RecyclerView.ViewHolder implementation to handle the complexity
-     * of the item that is to be displayed by the RecyclerView
-     */
-    static class SingleAttractionViewHolder
-            extends RecyclerView.ViewHolder {
+    private Bitmap getBitmapFromMemCache(String key) {
+        return memoryCache.get(key);
+    }
+    
+    static class DownscaleImagesTask extends AsyncTask<Integer, Void, Bitmap> {
         
-        ImageView attractionImage;
-        TextView attractionTitle;
-        TextView attractionBriefDescription;
-        CardView attractionCardView;
+        private Resources resources;
+        private SingleAttractionViewHolder imageViewHolder;
+        private LruCache<String, Bitmap> memoryCache;
         
-        /**
-         * This is the method that handles caching of the findViewById results to avoid repeatedly
-         * performing such expensive tasks
-         *
-         * @param itemView holds the ViewGroup information of the inflated view
-         */
-        SingleAttractionViewHolder(View itemView) {
-            super(itemView);
+        DownscaleImagesTask(Resources resources, LruCache<String, Bitmap> memoryCache,
+                            SingleAttractionViewHolder imageViewHolder) {
+            super();
+            this.resources = resources;
+            this.imageViewHolder = imageViewHolder;
+            this.memoryCache = memoryCache;
+        }
+        
+        @Override
+        protected Bitmap doInBackground(Integer... imageResId) {
+            Bitmap bitmap = ScaledImages.decodeSampledBitmapFromResource(
+                    resources,
+                    imageResId[0],
+                    CARD_SIZE_IMAGE_DECODE
+            );
+            memoryCache.put(imageResId[0].toString(), bitmap);
             
-            attractionCardView = itemView.findViewById(R.id.attraction_card_view);
-            attractionImage = itemView.findViewById(R.id.attraction_image_view);
-            attractionTitle = itemView.findViewById(R.id.attraction_title_text_view);
-            attractionBriefDescription = itemView.findViewById(R.id.attraction_brief_desc_text_view);
+            return bitmap;
+        }
+        
+        @Override
+        protected void onPostExecute(Bitmap bitmap) {
+            imageViewHolder.attractionImage.setImageBitmap(bitmap);
         }
     }
 }

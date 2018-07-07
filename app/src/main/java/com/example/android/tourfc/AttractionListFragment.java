@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,7 +19,6 @@ import java.util.List;
 public class AttractionListFragment extends Fragment {
     /* Class Constants */
     private static final String ARG_SECTION_TITLE = "sectionTitle";
-    private static final String TAG = AttractionListFragment.class.getSimpleName();
 
     /* Class variables */
     private int sectionTitle;
@@ -43,10 +41,10 @@ public class AttractionListFragment extends Fragment {
 
         if (getArguments() != null) {
             sectionTitle = getArguments().getInt(ARG_SECTION_TITLE);
-            Log.d(TAG, "onCreate: section title = " + sectionTitle);
         }
     }
 
+    @SuppressWarnings("ConstantConditions")
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,

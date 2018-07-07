@@ -29,7 +29,7 @@ final class ScaledImages {
         int inSampleSize = 1;
         
         if (srcHeight > reqHeight || srcWidth > reqWidth) {
-    
+            
             float widthScale = srcWidth / 2;
             float heightScale = srcHeight / 2;
             
@@ -47,19 +47,32 @@ final class ScaledImages {
      * @param resId an {@link int} value of the image resource ID
      * @return a scaled down {@link Bitmap} of the image file
      */
-    static Bitmap decodeSampledBitmapFromResource(Resources res, int resId) {
+    static Bitmap decodeSampledBitmapFromResource(Resources res, int resId, int viewType) {
         
-        // Convert image's width dimension in dips to pixels
-        int imageWidth = (int) TypedValue.applyDimension(
-                TypedValue.COMPLEX_UNIT_DIP,
-                300,
-                res.getDisplayMetrics());
-    
-        // Convert image's height dimension in dips to pixels
-        int imageHeight = (int) TypedValue.applyDimension(
-                TypedValue.COMPLEX_UNIT_DIP,
-                150,
-                res.getDisplayMetrics());
+        int imageWidth = 0;
+        int imageHeight = 0;
+        
+        switch (viewType) {
+            case SingleAttractionDataAdapter.CARD_SIZE_IMAGE_DECODE:
+                imageWidth = (int) TypedValue.applyDimension(
+                        TypedValue.COMPLEX_UNIT_DIP,
+                        300,
+                        res.getDisplayMetrics());
+                imageHeight = (int) TypedValue.applyDimension(
+                        TypedValue.COMPLEX_UNIT_DIP,
+                        150,
+                        res.getDisplayMetrics());
+                break;
+            case AttractionListAdapter.LIST_ITEM_IMAGE_DECODE:
+                imageWidth = imageHeight =
+                        (int) TypedValue.applyDimension(
+                                TypedValue.COMPLEX_UNIT_DIP,
+                                88,
+                                res.getDisplayMetrics()
+                        );
+            default:
+                break;
+        }
         
         // First decode with inJustDecodeBounds=true to check dimensions
         BitmapFactory.Options options = new BitmapFactory.Options();
