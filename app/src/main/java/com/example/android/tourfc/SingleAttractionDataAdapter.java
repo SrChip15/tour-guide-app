@@ -28,7 +28,7 @@ class SingleAttractionDataAdapter
      * Create the adapter for a single Attraction class object
      *
      * @param context     to get a handle on the application's environment
-     * @param attractions ArrayList of Attractions
+     * @param attractions an ArrayList of Attractions
      */
     SingleAttractionDataAdapter(Context context, List<Attraction> attractions) {
         this.mAttractions = attractions;
@@ -36,13 +36,13 @@ class SingleAttractionDataAdapter
     }
     
     /**
-     * This method is called when a new {@link RecyclerView.ViewHolder} is required by the
-     * recycler view to display an {@link Attraction} item
+     * This method is called when a new RecyclerView.ViewHolder is required by the
+     * recycler view to display an Attraction item
      *
-     * @param parent   the primary {@link ViewGroup} for the application
-     * @param viewType a {@link boolean} value indicating whether the inflated view is to be attached
+     * @param parent   the primary ViewGroup for the application
+     * @param viewType a boolean value indicating whether the inflated view is to be attached
      *                 to the root view
-     * @return the {@link SingleAttractionViewHolder} that has a backing inflated layout
+     * @return the SingleAttractionViewHolder that has a backing inflated layout
      */
     @NonNull
     @Override
@@ -56,8 +56,8 @@ class SingleAttractionDataAdapter
      * This method is responsible for mapping data to the item that is being currently displayed to
      * the user
      *
-     * @param holder   the {@link SingleAttractionViewHolder} with the inflated custom layout to
-     *                 display the {@link Attraction} object item
+     * @param holder   the SingleAttractionViewHolder with the inflated custom layout to
+     *                 display the Attraction object item
      * @param position the position of the item in the recycler view that is being viewed by the
      *                 user
      */
@@ -99,8 +99,8 @@ class SingleAttractionDataAdapter
     
     /**
      * Nested inner class that provides the adapter with cached expensive findViewById results
-     * Basically, a custom {@link RecyclerView.ViewHolder} implementation to handle the complexity
-     * of the item that is to be displayed by the {@link RecyclerView}
+     * Basically, a custom RecyclerView.ViewHolder implementation to handle the complexity
+     * of the item that is to be displayed by the RecyclerView
      */
     static class SingleAttractionViewHolder
             extends RecyclerView.ViewHolder {
@@ -114,7 +114,7 @@ class SingleAttractionDataAdapter
          * This is the method that handles caching of the findViewById results to avoid repeatedly
          * performing such expensive tasks
          *
-         * @param itemView holds the {@link ViewGroup} information of the inflated view
+         * @param itemView holds the ViewGroup information of the inflated view
          */
         SingleAttractionViewHolder(View itemView) {
             super(itemView);
